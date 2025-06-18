@@ -1,0 +1,7 @@
+fastapi==0.68.0
+uvicorn==0.15.0
+python-multipart==0.0.5
+pytest==7.0.1
+httpx==0.24.0
+sqlalchemy==1.4.23
+requests==2.31.0

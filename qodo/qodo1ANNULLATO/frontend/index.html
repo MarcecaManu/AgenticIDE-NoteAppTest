@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .note {
+            border: 1px solid #ddd;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .note-actions {
+            margin-top: 10px;
+        }
+        .search-bar {
+            margin: 20px 0;
+            width: 100%;
+            padding: 8px;
+        }
+        .form-group {
+            margin: 10px 0;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+        }
+        button {
+            padding: 5px 10px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Note Manager</h1>
+    
+    <input type="text" id="searchBar" class="search-bar" placeholder="Search notes by title...">
+    
+    <div id="noteForm">
+        <h2>Create New Note</h2>
+        <div class="form-group">
+            <label for="noteTitle">Title:</label>
+            <input type="text" id="noteTitle" required>
+        </div>
+        <div class="form-group">
+            <label for="noteContent">Content:</label>
+            <textarea id="noteContent" rows="4" required></textarea>
+        </div>
+        <button onclick="createNote()">Create Note</button>
+    </div>
+
+    <div id="notesList">
+        <!-- Notes will be dynamically inserted here -->
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+</qodoArtifact>
+
+6. Now, let's implement the frontend JavaScript:

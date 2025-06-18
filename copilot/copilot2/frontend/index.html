@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .note-form {
+            margin-bottom: 20px;
+        }
+        .note-form input, .note-form textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+        .note-list {
+            display: grid;
+            gap: 10px;
+        }
+        .note-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .note-controls {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        #searchBar {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Note Manager</h1>
+    
+    <input type="text" id="searchBar" placeholder="Search notes by title...">
+    
+    <div class="note-form">
+        <h2 id="formTitle">Create New Note</h2>
+        <input type="hidden" id="noteId">
+        <input type="text" id="noteTitle" placeholder="Note Title" required>
+        <textarea id="noteContent" placeholder="Note Content" rows="4" required></textarea>
+        <button onclick="saveNote()">Save Note</button>
+        <button onclick="resetForm()" style="display: none;" id="cancelButton">Cancel</button>
+    </div>
+
+    <div class="note-list" id="noteList">
+        <!-- Notes will be dynamically inserted here -->
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

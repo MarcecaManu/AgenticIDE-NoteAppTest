@@ -1,0 +1,13 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "note-manager"
+version = "0.1.0"
+description = "A simple note manager application"
+
+[tool.pytest.ini_options]
+pythonpath = [".", "backend"]
+testpaths = ["tests"]
+addopts = "-v"

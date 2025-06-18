@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Note Manager</h1>
+        
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search notes by title...">
+        </div>
+
+        <div class="note-form">
+            <input type="hidden" id="noteId">
+            <input type="text" id="titleInput" placeholder="Note Title" required>
+            <textarea id="contentInput" placeholder="Note Content" required></textarea>
+            <button id="saveButton">Save Note</button>
+            <button id="cancelButton" style="display: none;">Cancel</button>
+        </div>
+
+        <div id="notesList" class="notes-list">
+            <!-- Notes will be dynamically inserted here -->
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

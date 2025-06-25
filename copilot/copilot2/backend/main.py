@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 from typing import List
 from datetime import datetime
 from pydantic import BaseModel
-from database import get_db, Note  # Changed back to absolute import
+from backend.database import get_db, Note  # Changed back to absolute import
 
 app = FastAPI()
 

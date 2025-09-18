@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-container">
+            <h1>Authentication System</h1>
+            
+            <!-- Login Form -->
+            <div id="login-section" class="form-section">
+                <h2>Login</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-username">Username:</label>
+                        <input type="text" id="login-username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password:</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+                <p>Don't have an account? <a href="#" id="show-register">Register here</a></p>
+            </div>
+
+            <!-- Register Form -->
+            <div id="register-section" class="form-section" style="display: none;">
+                <h2>Register</h2>
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="register-username">Username:</label>
+                        <input type="text" id="register-username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password:</label>
+                        <input type="password" id="register-password" required>
+                    </div>
+                    <button type="submit">Register</button>
+                </form>
+                <p>Already have an account? <a href="#" id="show-login">Login here</a></p>
+            </div>
+
+            <!-- Profile Section -->
+            <div id="profile-section" class="form-section" style="display: none;">
+                <h2>User Profile</h2>
+                <div id="profile-info">
+                    <p><strong>ID:</strong> <span id="user-id"></span></p>
+                    <p><strong>Username:</strong> <span id="user-username"></span></p>
+                    <p><strong>Created At:</strong> <span id="user-created"></span></p>
+                </div>
+                <button id="logout-btn">Logout</button>
+            </div>
+
+            <!-- Message Display -->
+            <div id="message" class="message"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

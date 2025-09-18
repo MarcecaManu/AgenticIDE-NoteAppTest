@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-header">
+            <h1>Authentication System</h1>
+            <div id="user-info" class="user-info" style="display: none;">
+                <span id="username-display"></span>
+                <button id="logout-btn" class="btn btn-secondary">Logout</button>
+            </div>
+        </div>
+
+        <!-- Login Form -->
+        <div id="login-section" class="auth-section">
+            <div class="auth-card">
+                <h2>Login</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-username">Username:</label>
+                        <input type="text" id="login-username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password:</label>
+                        <input type="password" id="login-password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+                <p class="switch-form">
+                    Don't have an account? <a href="#" id="show-register">Register here</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Register Form -->
+        <div id="register-section" class="auth-section" style="display: none;">
+            <div class="auth-card">
+                <h2>Register</h2>
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="register-username">Username:</label>
+                        <input type="text" id="register-username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password:</label>
+                        <input type="password" id="register-password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" name="confirmPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+                <p class="switch-form">
+                    Already have an account? <a href="#" id="show-login">Login here</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Profile Section -->
+        <div id="profile-section" class="auth-section" style="display: none;">
+            <div class="auth-card">
+                <h2>User Profile</h2>
+                <div id="profile-content">
+                    <div class="profile-info">
+                        <p><strong>Username:</strong> <span id="profile-username"></span></p>
+                        <p><strong>Member since:</strong> <span id="profile-created"></span></p>
+                    </div>
+                    <button id="view-profile-btn" class="btn btn-secondary">Refresh Profile</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Messages -->
+        <div id="message-container"></div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>

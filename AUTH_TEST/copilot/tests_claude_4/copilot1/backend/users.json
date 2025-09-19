@@ -1,0 +1,12 @@
+{
+  "pizza": {
+    "username": "pizza",
+    "hashed_password": "$2b$12$qS38wO0iTgjlLRM/p5/heeLTf.EN/MrPRMaBhda3d/i/QFpb/VJZS",
+    "created_at": "2025-09-16T15:17:23.651252"
+  },
+  "user_a51eafdb@example.com": {
+    "username": "user_a51eafdb@example.com",
+    "hashed_password": "$2b$12$rdJWJYnsvW71Yy8Mi0lYIemay0SJS3hSGNoMHmmmisH2GdU8l95X6",
+    "created_at": "2025-09-16T15:27:30.337630"
+  }
+}

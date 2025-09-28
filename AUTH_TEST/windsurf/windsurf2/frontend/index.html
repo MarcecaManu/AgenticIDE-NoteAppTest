@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+            max-width: 400px;
+            min-height: 500px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e1e5e9;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 15px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: #f8f9fa;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #c82333;
+        }
+
+        .message {
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .profile-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .profile-info h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .profile-info p {
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .switch-form {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+
+        .switch-form a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .switch-form a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="header-title">Welcome</h1>
+            <p id="header-subtitle">Please sign in to continue</p>
+        </div>
+        
+        <div class="content">
+            <div id="message-container"></div>
+            
+            <!-- Login Form -->
+            <div id="login-form" class="auth-form">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="login-username">Username</label>
+                        <input type="text" id="login-username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign In</button>
+                </form>
+                <div class="switch-form">
+                    Don't have an account? <a href="#" id="show-register">Sign up</a>
+                </div>
+            </div>
+
+            <!-- Register Form -->
+            <div id="register-form" class="auth-form hidden">
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="register-username">Username</label>
+                        <input type="text" id="register-username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <input type="password" id="register-password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-confirm-password">Confirm Password</label>
+                        <input type="password" id="register-confirm-password" name="confirmPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </form>
+                <div class="switch-form">
+                    Already have an account? <a href="#" id="show-login">Sign in</a>
+                </div>
+            </div>
+
+            <!-- Profile View -->
+            <div id="profile-view" class="hidden">
+                <div class="profile-info">
+                    <h3>Profile Information</h3>
+                    <p><strong>User ID:</strong> <span id="profile-id"></span></p>
+                    <p><strong>Username:</strong> <span id="profile-username"></span></p>
+                    <p><strong>Member Since:</strong> <span id="profile-created"></span></p>
+                </div>
+                <button id="logout-btn" class="btn btn-danger">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

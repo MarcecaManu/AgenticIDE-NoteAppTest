@@ -1,6 +1,6 @@
 import pytest
 from fastapi.testclient import TestClient
-from conftest import test_client, sample_user, authenticated_client
+from .conftest import test_client, sample_user, authenticated_client
 
 class TestUserRegistration:
     """Test user registration functionality."""

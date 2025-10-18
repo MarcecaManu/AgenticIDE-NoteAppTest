@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+            max-width: 400px;
+            min-height: 500px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .btn:disabled {
+            opacity: 0.6;
+            transform: none;
+            cursor: not-allowed;
+        }
+        
+        .link-btn {
+            background: none;
+            color: #667eea;
+            text-decoration: underline;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+        
+        .error {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 10px;
+            padding: 10px;
+            background: #ffeaea;
+            border-radius: 5px;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .success {
+            color: #27ae60;
+            font-size: 14px;
+            margin-top: 10px;
+            padding: 10px;
+            background: #eafaf1;
+            border-radius: 5px;
+            border-left: 4px solid #27ae60;
+        }
+        
+        .profile-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .profile-info h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .profile-info p {
+            color: #666;
+            margin-bottom: 8px;
+        }
+        
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #ffffff;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .nav-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .nav-links button {
+            background: none;
+            border: none;
+            color: #667eea;
+            text-decoration: underline;
+            cursor: pointer;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+        
+        .nav-links button:hover {
+            color: #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="header-title">Welcome</h1>
+            <p id="header-subtitle">Please sign in to continue</p>
+        </div>
+        
+        <div class="content">
+            <!-- Login Page -->
+            <div id="login-page" class="page active">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-username">Username</label>
+                        <input type="text" id="login-username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn" id="login-btn">
+                        <span class="btn-text">Sign In</span>
+                    </button>
+                    <div id="login-error" class="error" style="display: none;"></div>
+                </form>
+                <div class="nav-links">
+                    <button type="button" onclick="showPage('register')">Don't have an account? Sign up</button>
+                </div>
+            </div>
+            
+            <!-- Register Page -->
+            <div id="register-page" class="page">
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="register-username">Username</label>
+                        <input type="text" id="register-username" name="username" required minlength="3" maxlength="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <input type="password" id="register-password" name="password" required minlength="6">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-confirm-password">Confirm Password</label>
+                        <input type="password" id="register-confirm-password" name="confirmPassword" required>
+                    </div>
+                    <button type="submit" class="btn" id="register-btn">
+                        <span class="btn-text">Sign Up</span>
+                    </button>
+                    <div id="register-error" class="error" style="display: none;"></div>
+                    <div id="register-success" class="success" style="display: none;"></div>
+                </form>
+                <div class="nav-links">
+                    <button type="button" onclick="showPage('login')">Already have an account? Sign in</button>
+                </div>
+            </div>
+            
+            <!-- Profile Page -->
+            <div id="profile-page" class="page">
+                <div class="profile-info">
+                    <h3>Profile Information</h3>
+                    <p><strong>User ID:</strong> <span id="profile-id">-</span></p>
+                    <p><strong>Username:</strong> <span id="profile-username">-</span></p>
+                    <p><strong>Member since:</strong> <span id="profile-created">-</span></p>
+                </div>
+                <button type="button" class="btn" onclick="logout()">
+                    <span class="btn-text">Logout</span>
+                </button>
+                <div id="profile-error" class="error" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

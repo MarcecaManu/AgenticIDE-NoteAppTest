@@ -27,7 +27,22 @@ app.add_middleware(
 )
 
 # Password hashing
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+import warnings
+with warnings.catch_warnings():
+    warnings.simplefilter("ignore")
+    try:
+        # First try bcrypt with specific backend configuration
+        pwd_context = CryptContext(
+            schemes=["bcrypt"],
+            deprecated="auto",
+            bcrypt__rounds=12
+        )
+        # Test the context with a simple password to make sure it works
+        test_hash = pwd_context.hash("test")
+    except Exception as e:
+        print(f"Bcrypt failed, falling back to pbkdf2_sha256: {e}")
+        # Fallback to pbkdf2_sha256 if bcrypt has issues
+        pwd_context = CryptContext(schemes=["pbkdf2_sha256"], deprecated="auto")
 
 # Security
 security = HTTPBearer()
@@ -71,7 +86,22 @@ def verify_password(plain_password, hashed_password):
 
 def get_password_hash(password):
     """Hash a password"""
-    return pwd_context.hash(password)
+    # bcrypt has a 72-byte limit, so truncate if necessary
+    if isinstance(password, str):
+        password_bytes = password.encode('utf-8')
+        if len(password_bytes) > 72:
+            password_bytes = password_bytes[:72]
+            password = password_bytes.decode('utf-8', errors='ignore')
+    
+    try:
+        return pwd_context.hash(password)
+    except ValueError as e:
+        if "password cannot be longer than 72 bytes" in str(e):
+            # Additional fallback - manually truncate and retry
+            if len(password.encode('utf-8')) > 72:
+                password = password[:72]
+            return pwd_context.hash(password)
+        raise
 
 def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):
     """Create JWT access token"""

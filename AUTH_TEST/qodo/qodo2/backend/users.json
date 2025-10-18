@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "pizzapizza",
+      "hashed_password": "$2b$12$.uukp9QXaFI98qek38Xg5.w0P46ZOfMfMfICzlAr/o3dllSN77xgy"
+    },
+    {
+      "id": 2,
+      "username": "user_7889062f@example.com",
+      "hashed_password": "$2b$12$rsG3rmc9FFLXpSSdjhGseufB0t7NPgUVu1P0Qz9xzRZLsPk0vghtq"
+    }
+  ],
+  "next_id": 3
+}

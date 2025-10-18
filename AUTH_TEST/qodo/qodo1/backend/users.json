@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "pizza",
+      "hashed_password": "$2b$12$00JxSD9wLT3kEsLd5H/rgen4ZZMwe1qP0bEpfLRXd15IqcTxlPPfO"
+    },
+    {
+      "id": 2,
+      "username": "user_cdaef208@example.com",
+      "hashed_password": "$2b$12$Aw3giCA3BgtgFnXgXxgGQeyg/3igqlgEXztcegiSDpPSgEY/PNDtu"
+    },
+    {
+      "id": 3,
+      "username": "user_b2d17a1e@example.com",
+      "hashed_password": "$2b$12$C6thhzW9dtlUnP7cygxmYuQITRJN41YusEeRRuk39KwDMpC.1mdk2"
+    }
+  ],
+  "next_id": 4
+}

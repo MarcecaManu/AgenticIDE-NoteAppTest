@@ -18,6 +18,21 @@ foreach ($folder in $folders) {
     if (Test-Path $frontendPath) {
         Write-Host "=== Processando: $($folder.Name) ===" -ForegroundColor Green
         
+        # Uccidi qualsiasi processo sulla porta 3000
+        Write-Host "  Pulizia porta 3000..." -ForegroundColor Gray
+        $netstatOutput = netstat -ano | Select-String ":3000" | Select-String "LISTENING"
+        if ($netstatOutput) {
+            $netstatOutput | ForEach-Object {
+                $line = $_.Line
+                $pid = $line -split '\s+' | Select-Object -Last 1
+                if ($pid -and $pid -match '^\d+$') {
+                    Write-Host "  Terminazione processo PID $pid sulla porta 3000..." -ForegroundColor Yellow
+                    Stop-Process -Id $pid -Force -ErrorAction SilentlyContinue
+                }
+            }
+        }
+        Start-Sleep -Seconds 1
+        
         # Entra nella cartella frontend
         Set-Location $frontendPath
         Write-Host "  Directory: $frontendPath" -ForegroundColor Gray
@@ -41,7 +56,7 @@ foreach ($folder in $folders) {
             
             # Esegue Lighthouse
             Write-Host "  Esecuzione Lighthouse..." -ForegroundColor Yellow
-            lighthouse http://localhost:3000 --output html --output-path ../lighthouse-report.html --quiet
+            lighthouse http://localhost:3000 --preset=desktop --output html --output-path ../lighthouse-report.html --quiet
             
             if (Test-Path "../lighthouse-report.html") {
                 Write-Host "  Report generato: lighthouse-report.html" -ForegroundColor Green

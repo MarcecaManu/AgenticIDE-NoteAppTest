@@ -154,3 +154,4 @@ The frontend is a single-page application using vanilla JavaScript. No build pro
 
 This project is provided as-is for educational purposes.
 
+

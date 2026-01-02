@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Chat</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Login Screen -->
+        <div id="loginScreen" class="screen active">
+            <div class="login-box">
+                <h1>💬 Real-time Chat</h1>
+                <p class="subtitle">Enter your username to get started</p>
+                <input type="text" id="usernameInput" placeholder="Enter your username" maxlength="50" />
+                <button id="joinBtn" class="primary-btn">Continue</button>
+            </div>
+        </div>
+
+        <!-- Room Selection Screen -->
+        <div id="roomScreen" class="screen">
+            <div class="room-box">
+                <h2>Select a Chat Room</h2>
+                <div class="create-room-section">
+                    <input type="text" id="roomNameInput" placeholder="New room name" maxlength="100" />
+                    <button id="createRoomBtn" class="primary-btn">Create Room</button>
+                </div>
+                <div class="room-list" id="roomList">
+                    <div class="loading">Loading rooms...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Screen -->
+        <div id="chatScreen" class="screen">
+            <div class="chat-container">
+                <!-- Header -->
+                <div class="chat-header">
+                    <div class="header-left">
+                        <button id="backBtn" class="icon-btn">← Back</button>
+                        <h2 id="roomName">Room Name</h2>
+                    </div>
+                    <div class="connection-status" id="connectionStatus">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Connected</span>
+                    </div>
+                </div>
+
+                <!-- Main Chat Area -->
+                <div class="chat-main">
+                    <!-- Sidebar -->
+                    <div class="sidebar">
+                        <h3>Online Users (<span id="userCount">0</span>)</h3>
+                        <ul id="userList"></ul>
+                    </div>
+
+                    <!-- Messages Area -->
+                    <div class="messages-container">
+                        <div class="messages" id="messages">
+                            <div class="system-message">Welcome to the chat room!</div>
+                        </div>
+                        <div id="typingIndicator" class="typing-indicator" style="display: none;">
+                            <span></span> is typing...
+                        </div>
+                        <div class="message-input-container">
+                            <input 
+                                type="text" 
+                                id="messageInput" 
+                                placeholder="Type a message..." 
+                                maxlength="1000"
+                                autocomplete="off"
+                            />
+                            <button id="sendBtn" class="primary-btn">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
+

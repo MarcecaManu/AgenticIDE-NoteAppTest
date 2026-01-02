@@ -24,10 +24,10 @@ foreach ($folder in $folders) {
         if ($netstatOutput) {
             $netstatOutput | ForEach-Object {
                 $line = $_.Line
-                $pid = $line -split '\s+' | Select-Object -Last 1
-                if ($pid -and $pid -match '^\d+$') {
-                    Write-Host "  Terminazione processo PID $pid sulla porta 3000..." -ForegroundColor Yellow
-                    Stop-Process -Id $pid -Force -ErrorAction SilentlyContinue
+                $processId = $line -split '\s+' | Select-Object -Last 1
+                if ($processId -and $processId -match '^\d+$') {
+                    Write-Host "  Terminazione processo PID $processId sulla porta 3000..." -ForegroundColor Yellow
+                    Stop-Process -Id $processId -Force -ErrorAction SilentlyContinue
                 }
             }
         }

@@ -372,3 +372,4 @@ class ChatApp {
 // Initialize app
 const app = new ChatApp();
 
+

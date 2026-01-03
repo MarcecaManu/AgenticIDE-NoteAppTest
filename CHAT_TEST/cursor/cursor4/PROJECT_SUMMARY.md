@@ -300,3 +300,4 @@ Provided as-is for educational purposes.
 
 **Built with ❤️ using FastAPI and Vanilla JavaScript**
 
+

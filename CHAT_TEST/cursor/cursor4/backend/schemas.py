@@ -55,3 +55,4 @@ class RoomListResponse(BaseModel):
     rooms: List[RoomResponse]
     count: int
 
+

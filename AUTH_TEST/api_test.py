@@ -16,7 +16,7 @@ def test_auth_flow():
     assert response.status_code in (200, 201)
     
     # LOGIN
-    response = httpx.post(f"{BASE_URL}/api/auth/login", data={
+    response = httpx.post(f"{BASE_URL}/api/auth/login", json={  # Changed from data= to json=
         "username": unique_user,
         "password": password
     })

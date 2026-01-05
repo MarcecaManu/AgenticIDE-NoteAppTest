@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Queue System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Task Queue & Background Processing</h1>
+            <p class="subtitle">Monitor and manage your background tasks</p>
+        </header>
+
+        <!-- Submit Task Form -->
+        <section class="card">
+            <h2>Submit New Task</h2>
+            <form id="submitTaskForm">
+                <div class="form-group">
+                    <label for="taskType">Task Type:</label>
+                    <select id="taskType" required>
+                        <option value="">-- Select Task Type --</option>
+                        <option value="csv_processing">CSV Data Processing</option>
+                        <option value="email_sending">Email Sending</option>
+                        <option value="image_processing">Image Processing</option>
+                    </select>
+                </div>
+
+                <!-- CSV Processing Parameters -->
+                <div id="csvParams" class="task-params" style="display: none;">
+                    <div class="form-group">
+                        <label for="numRows">Number of Rows:</label>
+                        <input type="number" id="numRows" value="1000" min="100" max="10000">
+                    </div>
+                    <div class="form-group">
+                        <label for="processingTime">Processing Time (seconds):</label>
+                        <input type="number" id="processingTime" value="15" min="5" max="60">
+                    </div>
+                </div>
+
+                <!-- Email Parameters -->
+                <div id="emailParams" class="task-params" style="display: none;">
+                    <div class="form-group">
+                        <label for="numEmails">Number of Emails:</label>
+                        <input type="number" id="numEmails" value="10" min="1" max="100">
+                    </div>
+                    <div class="form-group">
+                        <label for="emailSubject">Email Subject:</label>
+                        <input type="text" id="emailSubject" value="Test Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="delayPerEmail">Delay per Email (seconds):</label>
+                        <input type="number" id="delayPerEmail" value="1" min="0.5" max="5" step="0.5">
+                    </div>
+                </div>
+
+                <!-- Image Processing Parameters -->
+                <div id="imageParams" class="task-params" style="display: none;">
+                    <div class="form-group">
+                        <label for="numImages">Number of Images:</label>
+                        <input type="number" id="numImages" value="5" min="1" max="20">
+                    </div>
+                    <div class="form-group">
+                        <label for="targetWidth">Target Width:</label>
+                        <input type="number" id="targetWidth" value="800" min="100" max="2000">
+                    </div>
+                    <div class="form-group">
+                        <label for="targetHeight">Target Height:</label>
+                        <input type="number" id="targetHeight" value="600" min="100" max="2000">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit Task</button>
+            </form>
+        </section>
+
+        <!-- Filters -->
+        <section class="card">
+            <h2>Filter Tasks</h2>
+            <div class="filters">
+                <div class="form-group">
+                    <label for="filterStatus">Status:</label>
+                    <select id="filterStatus">
+                        <option value="">All</option>
+                        <option value="PENDING">Pending</option>
+                        <option value="RUNNING">Running</option>
+                        <option value="SUCCESS">Success</option>
+                        <option value="FAILED">Failed</option>
+                        <option value="CANCELLED">Cancelled</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="filterType">Task Type:</label>
+                    <select id="filterType">
+                        <option value="">All</option>
+                        <option value="csv_processing">CSV Processing</option>
+                        <option value="email_sending">Email Sending</option>
+                        <option value="image_processing">Image Processing</option>
+                    </select>
+                </div>
+                <button id="refreshBtn" class="btn btn-secondary">🔄 Refresh</button>
+            </div>
+        </section>
+
+        <!-- Tasks List -->
+        <section class="card">
+            <div class="section-header">
+                <h2>Tasks (<span id="taskCount">0</span>)</h2>
+                <div class="auto-refresh">
+                    <label>
+                        <input type="checkbox" id="autoRefresh" checked>
+                        Auto-refresh (3s)
+                    </label>
+                </div>
+            </div>
+            <div id="tasksList"></div>
+        </section>
+    </div>
+
+    <!-- Task Detail Modal -->
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Task Details</h2>
+            <div id="taskDetails"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Queue System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 380px 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        .submit-panel {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 20px;
+        }
+
+        .submit-panel h2 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            color: #555;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        select, input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        select:focus, input:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+            font-family: 'Courier New', monospace;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .tasks-panel {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .tasks-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .tasks-header h2 {
+            color: #333;
+            font-size: 20px;
+        }
+
+        .refresh-btn {
+            width: auto;
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+
+        .filters {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .filters select {
+            padding: 10px;
+        }
+
+        .task-list {
+            display: grid;
+            gap: 15px;
+        }
+
+        .task-card {
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .task-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .task-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 12px;
+        }
+
+        .task-id {
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            color: #666;
+            background: #f5f5f5;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .status-badge {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .status-pending { background: #fff3cd; color: #856404; }
+        .status-running { background: #cce5ff; color: #004085; }
+        .status-success { background: #d4edda; color: #155724; }
+        .status-failed { background: #f8d7da; color: #721c24; }
+        .status-cancelled { background: #e2e3e5; color: #383d41; }
+
+        .task-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 15px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .info-item {
+            font-size: 13px;
+        }
+
+        .info-label {
+            color: #666;
+            font-weight: 600;
+        }
+
+        .info-value {
+            color: #333;
+            margin-top: 4px;
+        }
+
+        .progress-container {
+            margin: 15px 0;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 24px;
+            background: #e9ecef;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .task-result {
+            margin-top: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #28a745;
+        }
+
+        .task-error {
+            margin-top: 15px;
+            padding: 15px;
+            background: #fff5f5;
+            border-radius: 8px;
+            border-left: 4px solid #dc3545;
+            color: #721c24;
+        }
+
+        .result-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .result-content {
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            white-space: pre-wrap;
+            word-break: break-all;
+            color: #555;
+        }
+
+        .task-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .task-actions button {
+            flex: 1;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .btn-cancel {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .btn-retry {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+        }
+
+        .empty-state svg {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+            opacity: 0.3;
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 16px 24px;
+            border-radius: 8px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .notification.success {
+            border-left: 4px solid #28a745;
+        }
+
+        .notification.error {
+            border-left: 4px solid #dc3545;
+        }
+
+        @media (max-width: 1024px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .submit-panel {
+                position: relative;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Task Queue & Background Processing System</h1>
+            <p class="subtitle">Submit and monitor background tasks with real-time status updates</p>
+        </header>
+
+        <div class="main-content">
+            <div class="submit-panel">
+                <h2>Submit New Task</h2>
+                <form id="taskForm">
+                    <div class="form-group">
+                        <label for="taskType">Task Type</label>
+                        <select id="taskType" required>
+                            <option value="">Select task type...</option>
+                            <option value="DATA_PROCESSING">Data Processing (CSV Analysis)</option>
+                            <option value="EMAIL_SIMULATION">Email Simulation</option>
+                            <option value="IMAGE_PROCESSING">Image Processing</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="paramsGroup">
+                        <label for="taskParams">Task Parameters (JSON)</label>
+                        <textarea id="taskParams" placeholder='{"key": "value"}'>{}</textarea>
+                    </div>
+
+                    <button type="submit">Submit Task</button>
+                </form>
+
+                <div style="margin-top: 20px; padding-top: 20px; border-top: 2px solid #f0f0f0;">
+                    <h3 style="font-size: 14px; color: #666; margin-bottom: 10px;">Parameter Examples:</h3>
+                    <div style="font-size: 12px; color: #888; line-height: 1.6;">
+                        <strong>Data Processing:</strong><br>
+                        {"file_size": 1000, "complexity": "medium"}<br><br>
+                        <strong>Email:</strong><br>
+                        {"recipient_count": 10, "template": "welcome"}<br><br>
+                        <strong>Image:</strong><br>
+                        {"image_count": 5, "operation": "resize"}
+                    </div>
+                </div>
+            </div>
+
+            <div class="tasks-panel">
+                <div class="tasks-header">
+                    <h2>Tasks</h2>
+                    <button class="refresh-btn" onclick="loadTasks()">🔄 Refresh</button>
+                </div>
+
+                <div class="filters">
+                    <div class="form-group">
+                        <label for="filterStatus">Filter by Status</label>
+                        <select id="filterStatus" onchange="loadTasks()">
+                            <option value="">All Statuses</option>
+                            <option value="PENDING">Pending</option>
+                            <option value="RUNNING">Running</option>
+                            <option value="SUCCESS">Success</option>
+                            <option value="FAILED">Failed</option>
+                            <option value="CANCELLED">Cancelled</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="filterType">Filter by Type</label>
+                        <select id="filterType" onchange="loadTasks()">
+                            <option value="">All Types</option>
+                            <option value="DATA_PROCESSING">Data Processing</option>
+                            <option value="EMAIL_SIMULATION">Email Simulation</option>
+                            <option value="IMAGE_PROCESSING">Image Processing</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="task-list" id="taskList">
+                    <div class="empty-state">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                        </svg>
+                        <h3>No tasks yet</h3>
+                        <p>Submit your first task to get started</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = '/api';
+        let autoRefreshInterval = null;
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            loadTasks();
+            startAutoRefresh();
+            setupFormHandler();
+        });
+
+        function setupFormHandler() {
+            document.getElementById('taskForm').addEventListener('submit', async (e) => {
+                e.preventDefault();
+                await submitTask();
+            });
+        }
+
+        async function submitTask() {
+            const taskType = document.getElementById('taskType').value;
+            const paramsText = document.getElementById('taskParams').value;
+
+            if (!taskType) {
+                showNotification('Please select a task type', 'error');
+                return;
+            }
+
+            let params = {};
+            try {
+                params = JSON.parse(paramsText);
+            } catch (e) {
+                showNotification('Invalid JSON parameters', 'error');
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_BASE}/tasks/submit`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ task_type: taskType, params })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to submit task');
+                }
+
+                const task = await response.json();
+                showNotification(`Task submitted: ${task.id}`, 'success');
+                
+                // Reset form
+                document.getElementById('taskType').value = '';
+                document.getElementById('taskParams').value = '{}';
+                
+                // Reload tasks
+                loadTasks();
+            } catch (error) {
+                showNotification(`Error: ${error.message}`, 'error');
+            }
+        }
+
+        async function loadTasks() {
+            const status = document.getElementById('filterStatus').value;
+            const taskType = document.getElementById('filterType').value;
+
+            let url = `${API_BASE}/tasks/?limit=50`;
+            if (status) url += `&status=${status}`;
+            if (taskType) url += `&task_type=${taskType}`;
+
+            try {
+                const response = await fetch(url);
+                const tasks = await response.json();
+                renderTasks(tasks);
+            } catch (error) {
+                console.error('Error loading tasks:', error);
+                showNotification('Error loading tasks', 'error');
+            }
+        }
+
+        function renderTasks(tasks) {
+            const taskList = document.getElementById('taskList');
+
+            if (tasks.length === 0) {
+                taskList.innerHTML = `
+                    <div class="empty-state">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                        </svg>
+                        <h3>No tasks found</h3>
+                        <p>Try adjusting your filters</p>
+                    </div>
+                `;
+                return;
+            }
+
+            taskList.innerHTML = tasks.map(task => createTaskCard(task)).join('');
+        }
+
+        function createTaskCard(task) {
+            const statusClass = `status-${task.status.toLowerCase()}`;
+            const progress = task.progress || 0;
+
+            let resultSection = '';
+            if (task.result_data) {
+                try {
+                    const result = JSON.parse(task.result_data);
+                    resultSection = `
+                        <div class="task-result">
+                            <div class="result-title">✓ Result</div>
+                            <div class="result-content">${JSON.stringify(result, null, 2)}</div>
+                        </div>
+                    `;
+                } catch (e) {
+                    resultSection = `
+                        <div class="task-result">
+                            <div class="result-title">✓ Result</div>
+                            <div class="result-content">${task.result_data}</div>
+                        </div>
+                    `;
+                }
+            }
+
+            if (task.error_message) {
+                resultSection = `
+                    <div class="task-error">
+                        <div class="result-title">✗ Error</div>
+                        <div class="result-content">${task.error_message}</div>
+                    </div>
+                `;
+            }
+
+            const actions = [];
+            if (task.status === 'PENDING' || task.status === 'RUNNING') {
+                actions.push(`<button class="btn-cancel" onclick="cancelTask('${task.id}')">Cancel</button>`);
+            }
+            if (task.status === 'FAILED') {
+                actions.push(`<button class="btn-retry" onclick="retryTask('${task.id}')">Retry</button>`);
+            }
+
+            return `
+                <div class="task-card">
+                    <div class="task-header">
+                        <div>
+                            <div class="task-id">${task.id}</div>
+                        </div>
+                        <span class="status-badge ${statusClass}">${task.status}</span>
+                    </div>
+
+                    <div class="task-info">
+                        <div class="info-item">
+                            <div class="info-label">Type</div>
+                            <div class="info-value">${formatTaskType(task.task_type)}</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Created</div>
+                            <div class="info-value">${formatDate(task.created_at)}</div>
+                        </div>
+                        ${task.started_at ? `
+                        <div class="info-item">
+                            <div class="info-label">Started</div>
+                            <div class="info-value">${formatDate(task.started_at)}</div>
+                        </div>
+                        ` : ''}
+                        ${task.completed_at ? `
+                        <div class="info-item">
+                            <div class="info-label">Completed</div>
+                            <div class="info-value">${formatDate(task.completed_at)}</div>
+                        </div>
+                        ` : ''}
+                        ${task.retry_count > 0 ? `
+                        <div class="info-item">
+                            <div class="info-label">Retry Count</div>
+                            <div class="info-value">${task.retry_count}</div>
+                        </div>
+                        ` : ''}
+                    </div>
+
+                    ${task.status === 'RUNNING' || task.status === 'PENDING' ? `
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: ${progress}%">
+                                ${progress.toFixed(1)}%
+                            </div>
+                        </div>
+                    </div>
+                    ` : ''}
+
+                    ${resultSection}
+
+                    ${actions.length > 0 ? `
+                    <div class="task-actions">
+                        ${actions.join('')}
+                    </div>
+                    ` : ''}
+                </div>
+            `;
+        }
+
+        async function cancelTask(taskId) {
+            if (!confirm('Are you sure you want to cancel this task?')) {
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_BASE}/tasks/${taskId}`, {
+                    method: 'DELETE'
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to cancel task');
+                }
+
+                showNotification('Task cancelled successfully', 'success');
+                loadTasks();
+            } catch (error) {
+                showNotification(`Error: ${error.message}`, 'error');
+            }
+        }
+
+        async function retryTask(taskId) {
+            try {
+                const response = await fetch(`${API_BASE}/tasks/${taskId}/retry`, {
+                    method: 'POST'
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to retry task');
+                }
+
+                const newTask = await response.json();
+                showNotification(`Task retried: ${newTask.id}`, 'success');
+                loadTasks();
+            } catch (error) {
+                showNotification(`Error: ${error.message}`, 'error');
+            }
+        }
+
+        function formatTaskType(type) {
+            return type.replace(/_/g, ' ').toLowerCase()
+                .split(' ')
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(' ');
+        }
+
+        function formatDate(dateString) {
+            if (!dateString) return 'N/A';
+            const date = new Date(dateString);
+            return date.toLocaleString();
+        }
+
+        function showNotification(message, type = 'success') {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        function startAutoRefresh() {
+            // Refresh every 2 seconds
+            autoRefreshInterval = setInterval(() => {
+                loadTasks();
+            }, 2000);
+        }
+
+        // Clean up on page unload
+        window.addEventListener('beforeunload', () => {
+            if (autoRefreshInterval) {
+                clearInterval(autoRefreshInterval);
+            }
+        });
+    </script>
+</body>
+</html>

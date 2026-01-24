@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💬 Real-time Chat</h1>
+            <div class="connection-status" id="connectionStatus">
+                <span class="status-dot"></span>
+                <span class="status-text">Disconnected</span>
+            </div>
+        </div>
+
+        <div id="loginScreen" class="screen active">
+            <div class="login-card">
+                <h2>Join Chat</h2>
+                <input type="text" id="usernameInput" placeholder="Enter your username" maxlength="20">
+                <button id="setUsernameBtn" class="btn btn-primary">Continue</button>
+            </div>
+        </div>
+
+        <div id="roomScreen" class="screen">
+            <div class="room-selection">
+                <h2>Chat Rooms</h2>
+                <div class="room-actions">
+                    <input type="text" id="newRoomInput" placeholder="New room name" maxlength="50">
+                    <button id="createRoomBtn" class="btn btn-primary">Create Room</button>
+                    <button id="refreshRoomsBtn" class="btn btn-secondary">🔄 Refresh</button>
+                </div>
+                <div id="roomList" class="room-list"></div>
+            </div>
+        </div>
+
+        <div id="chatScreen" class="screen">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="room-info">
+                        <h2 id="currentRoomName">Room Name</h2>
+                        <button id="leaveRoomBtn" class="btn btn-secondary">← Leave Room</button>
+                    </div>
+                    <div class="online-users">
+                        <h3>Online Users (<span id="userCount">0</span>)</h3>
+                        <div id="userList" class="user-list"></div>
+                    </div>
+                </div>
+
+                <div class="chat-messages" id="chatMessages"></div>
+
+                <div class="typing-indicator" id="typingIndicator"></div>
+
+                <div class="chat-input">
+                    <input type="text" id="messageInput" placeholder="Type a message..." maxlength="500">
+                    <button id="sendMessageBtn" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="errorToast" class="toast"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

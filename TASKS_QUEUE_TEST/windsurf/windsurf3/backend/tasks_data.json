@@ -1,0 +1,1529 @@
+{
+  "571b64ae-471b-49a0-bfdd-b7533657c680": {
+    "id": "571b64ae-471b-49a0-bfdd-b7533657c680",
+    "task_type": "data_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:09:45.640393+00:00",
+    "started_at": "2026-01-24T12:09:45.649866+00:00",
+    "completed_at": "2026-01-24T12:10:00.757206+00:00",
+    "result_data": {
+      "rows_processed": 1000,
+      "total_sum": 499500,
+      "average": 499.5,
+      "processing_time": 15,
+      "timestamp": "2026-01-24T12:10:00.757206"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "26e89304-b678-4ef6-a31b-3ed91b01d6bc": {
+    "id": "26e89304-b678-4ef6-a31b-3ed91b01d6bc",
+    "task_type": "email_simulation",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:09:47.805048+00:00",
+    "started_at": "2026-01-24T12:09:47.817379+00:00",
+    "completed_at": "2026-01-24T12:09:58.001020+00:00",
+    "result_data": {
+      "total_sent": 10,
+      "emails": [
+        {
+          "recipient": "user1@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:09:47.841991",
+          "status": "sent"
+        },
+        {
+          "recipient": "user2@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:09:48.861133",
+          "status": "sent"
+        },
+        {
+          "recipient": "user3@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:09:49.881072",
+          "status": "sent"
+        },
+        {
+          "recipient": "user4@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:09:50.905063",
+          "status": "sent"
+        },
+        {
+          "recipient": "user5@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:09:51.913920",
+          "status": "sent"
+        },
+        {
+          "recipient": "user6@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:09:52.936301",
+          "status": "sent"
+        },
+        {
+          "recipient": "user7@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:09:53.958163",
+          "status": "sent"
+        },
+        {
+          "recipient": "user8@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:09:54.960180",
+          "status": "sent"
+        },
+        {
+          "recipient": "user9@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:09:55.963988",
+          "status": "sent"
+        },
+        {
+          "recipient": "user10@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:09:56.982926",
+          "status": "sent"
+        }
+      ],
+      "timestamp": "2026-01-24T12:09:58.001020"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "d7bee87c-450a-4f60-be0c-681ecc66756e": {
+    "id": "d7bee87c-450a-4f60-be0c-681ecc66756e",
+    "task_type": "image_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:09:50.222699+00:00",
+    "started_at": "2026-01-24T12:09:50.231532+00:00",
+    "completed_at": "2026-01-24T12:10:00.338214+00:00",
+    "result_data": {
+      "total_processed": 5,
+      "operation": "resize",
+      "images": [
+        {
+          "image_name": "image_1.jpg",
+          "operation": "resize",
+          "original_size": "1722x686",
+          "new_size": "446x355",
+          "processed_at": "2026-01-24T12:09:50.251549"
+        },
+        {
+          "image_name": "image_2.jpg",
+          "operation": "resize",
+          "original_size": "823x947",
+          "new_size": "630x510",
+          "processed_at": "2026-01-24T12:09:52.277267"
+        },
+        {
+          "image_name": "image_3.jpg",
+          "operation": "resize",
+          "original_size": "1713x1459",
+          "new_size": "581x469",
+          "processed_at": "2026-01-24T12:09:54.287243"
+        },
+        {
+          "image_name": "image_4.jpg",
+          "operation": "resize",
+          "original_size": "897x1083",
+          "new_size": "569x316",
+          "processed_at": "2026-01-24T12:09:56.312957"
+        },
+        {
+          "image_name": "image_5.jpg",
+          "operation": "resize",
+          "original_size": "1239x720",
+          "new_size": "698x585",
+          "processed_at": "2026-01-24T12:09:58.321248"
+        }
+      ],
+      "timestamp": "2026-01-24T12:10:00.338214"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "7a6ce033-fb73-49ac-a312-f9454f135a7c": {
+    "id": "7a6ce033-fb73-49ac-a312-f9454f135a7c",
+    "task_type": "data_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:10:22.198206+00:00",
+    "started_at": "2026-01-24T12:10:22.211073+00:00",
+    "completed_at": "2026-01-24T12:10:37.273753+00:00",
+    "result_data": {
+      "rows_processed": 500,
+      "total_sum": 124750,
+      "average": 249.5,
+      "processing_time": 15,
+      "timestamp": "2026-01-24T12:10:37.273753"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "1895d6f4-13b9-46cd-8663-05e205e92a95": {
+    "id": "1895d6f4-13b9-46cd-8663-05e205e92a95",
+    "task_type": "email_simulation",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:10:42.041393+00:00",
+    "started_at": "2026-01-24T12:10:42.051830+00:00",
+    "completed_at": "2026-01-24T12:10:52.152766+00:00",
+    "result_data": {
+      "total_sent": 10,
+      "emails": [
+        {
+          "recipient": "user1@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:10:42.070194",
+          "status": "sent"
+        },
+        {
+          "recipient": "user2@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:10:43.061786",
+          "status": "sent"
+        },
+        {
+          "recipient": "user3@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:10:44.070566",
+          "status": "sent"
+        },
+        {
+          "recipient": "user4@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:10:45.053480",
+          "status": "sent"
+        },
+        {
+          "recipient": "user5@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:10:46.066413",
+          "status": "sent"
+        },
+        {
+          "recipient": "user6@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:10:47.070518",
+          "status": "sent"
+        },
+        {
+          "recipient": "user7@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:10:48.083270",
+          "status": "sent"
+        },
+        {
+          "recipient": "user8@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:10:49.100893",
+          "status": "sent"
+        },
+        {
+          "recipient": "user9@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:10:50.118604",
+          "status": "sent"
+        },
+        {
+          "recipient": "user10@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:10:51.144067",
+          "status": "sent"
+        }
+      ],
+      "timestamp": "2026-01-24T12:10:52.152766"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "df4d514f-2a5e-42c4-9f0f-e5547cd653f6": {
+    "id": "df4d514f-2a5e-42c4-9f0f-e5547cd653f6",
+    "task_type": "data_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:10:44.431056+00:00",
+    "started_at": "2026-01-24T12:10:44.440652+00:00",
+    "completed_at": "2026-01-24T12:10:59.511455+00:00",
+    "result_data": {
+      "rows_processed": 10000,
+      "total_sum": 49995000,
+      "average": 4999.5,
+      "processing_time": 15,
+      "timestamp": "2026-01-24T12:10:59.511455"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "edf0e61e-5241-4b2c-9e1b-b248a231d379": {
+    "id": "edf0e61e-5241-4b2c-9e1b-b248a231d379",
+    "task_type": "data_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:10:51.892615+00:00",
+    "started_at": "2026-01-24T12:10:51.905665+00:00",
+    "completed_at": "2026-01-24T12:11:07.001676+00:00",
+    "result_data": {
+      "rows_processed": 200,
+      "total_sum": 19900,
+      "average": 99.5,
+      "processing_time": 15,
+      "timestamp": "2026-01-24T12:11:07.001676"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "00c20bd5-0e2f-4158-be57-31349952028c": {
+    "id": "00c20bd5-0e2f-4158-be57-31349952028c",
+    "task_type": "email_simulation",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:10:54.574183+00:00",
+    "started_at": "2026-01-24T12:10:54.584370+00:00",
+    "completed_at": "2026-01-24T12:11:04.753859+00:00",
+    "result_data": {
+      "total_sent": 10,
+      "emails": [
+        {
+          "recipient": "user1@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:10:54.603594",
+          "status": "sent"
+        },
+        {
+          "recipient": "user2@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:10:55.634536",
+          "status": "sent"
+        },
+        {
+          "recipient": "user3@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:10:56.669140",
+          "status": "sent"
+        },
+        {
+          "recipient": "user4@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:10:57.694100",
+          "status": "sent"
+        },
+        {
+          "recipient": "user5@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:10:58.696068",
+          "status": "sent"
+        },
+        {
+          "recipient": "user6@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:10:59.704668",
+          "status": "sent"
+        },
+        {
+          "recipient": "user7@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:11:00.722853",
+          "status": "sent"
+        },
+        {
+          "recipient": "user8@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:11:01.734701",
+          "status": "sent"
+        },
+        {
+          "recipient": "user9@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:11:02.749884",
+          "status": "sent"
+        },
+        {
+          "recipient": "user10@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:11:03.763642",
+          "status": "sent"
+        }
+      ],
+      "timestamp": "2026-01-24T12:11:04.753859"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "feaab13f-e40a-4b03-85bf-d340b7851858": {
+    "id": "feaab13f-e40a-4b03-85bf-d340b7851858",
+    "task_type": "image_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:10:56.953177+00:00",
+    "started_at": "2026-01-24T12:10:56.968526+00:00",
+    "completed_at": "2026-01-24T12:11:07.034583+00:00",
+    "result_data": {
+      "total_processed": 5,
+      "operation": "resize",
+      "images": [
+        {
+          "image_name": "image_1.jpg",
+          "operation": "resize",
+          "original_size": "1899x1138",
+          "new_size": "718x497",
+          "processed_at": "2026-01-24T12:10:56.989683"
+        },
+        {
+          "image_name": "image_2.jpg",
+          "operation": "resize",
+          "original_size": "972x771",
+          "new_size": "605x545",
+          "processed_at": "2026-01-24T12:10:58.998953"
+        },
+        {
+          "image_name": "image_3.jpg",
+          "operation": "resize",
+          "original_size": "875x634",
+          "new_size": "631x569",
+          "processed_at": "2026-01-24T12:11:01.019948"
+        },
+        {
+          "image_name": "image_4.jpg",
+          "operation": "resize",
+          "original_size": "1912x721",
+          "new_size": "445x373",
+          "processed_at": "2026-01-24T12:11:03.018798"
+        },
+        {
+          "image_name": "image_5.jpg",
+          "operation": "resize",
+          "original_size": "1419x793",
+          "new_size": "445x415",
+          "processed_at": "2026-01-24T12:11:05.032865"
+        }
+      ],
+      "timestamp": "2026-01-24T12:11:07.034583"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "e10fe7a6-63e3-4891-8e08-322ea657df76": {
+    "id": "e10fe7a6-63e3-4891-8e08-322ea657df76",
+    "task_type": "email_simulation",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:11:02.184374+00:00",
+    "started_at": "2026-01-24T12:11:02.196815+00:00",
+    "completed_at": "2026-01-24T12:11:12.406177+00:00",
+    "result_data": {
+      "total_sent": 10,
+      "emails": [
+        {
+          "recipient": "user1@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:11:02.216126",
+          "status": "sent"
+        },
+        {
+          "recipient": "user2@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:11:03.243209",
+          "status": "sent"
+        },
+        {
+          "recipient": "user3@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:11:04.265048",
+          "status": "sent"
+        },
+        {
+          "recipient": "user4@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:11:05.279533",
+          "status": "sent"
+        },
+        {
+          "recipient": "user5@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:11:06.298929",
+          "status": "sent"
+        },
+        {
+          "recipient": "user6@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:11:07.331899",
+          "status": "sent"
+        },
+        {
+          "recipient": "user7@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:11:08.350058",
+          "status": "sent"
+        },
+        {
+          "recipient": "user8@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:11:09.368390",
+          "status": "sent"
+        },
+        {
+          "recipient": "user9@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:11:10.397758",
+          "status": "sent"
+        },
+        {
+          "recipient": "user10@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:11:11.400708",
+          "status": "sent"
+        }
+      ],
+      "timestamp": "2026-01-24T12:11:12.406177"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "6589007f-bafd-4581-982e-b81faa72a91b": {
+    "id": "6589007f-bafd-4581-982e-b81faa72a91b",
+    "task_type": "data_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:30:02.710215+00:00",
+    "started_at": "2026-01-24T12:30:02.724917+00:00",
+    "completed_at": "2026-01-24T12:30:17.803127+00:00",
+    "result_data": {
+      "rows_processed": 1000,
+      "total_sum": 499500,
+      "average": 499.5,
+      "processing_time": 15,
+      "timestamp": "2026-01-24T12:30:17.803127"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "f140ef22-44f9-45bf-92a4-c5c48a27fe3e": {
+    "id": "f140ef22-44f9-45bf-92a4-c5c48a27fe3e",
+    "task_type": "data_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:30:13.064235+00:00",
+    "started_at": "2026-01-24T12:30:13.086330+00:00",
+    "completed_at": "2026-01-24T12:30:28.144735+00:00",
+    "result_data": {
+      "rows_processed": 1000,
+      "total_sum": 499500,
+      "average": 499.5,
+      "processing_time": 15,
+      "timestamp": "2026-01-24T12:30:28.144735"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "b8bc4ed8-4c20-4fa6-a0d8-743b70c1a650": {
+    "id": "b8bc4ed8-4c20-4fa6-a0d8-743b70c1a650",
+    "task_type": "data_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:31:04.286393+00:00",
+    "started_at": "2026-01-24T12:31:04.300483+00:00",
+    "completed_at": "2026-01-24T12:31:19.393409+00:00",
+    "result_data": {
+      "rows_processed": 500,
+      "total_sum": 124750,
+      "average": 249.5,
+      "processing_time": 15,
+      "timestamp": "2026-01-24T12:31:19.393409"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "c77f1e49-b7ff-4cb0-8759-4ef9d893f973": {
+    "id": "c77f1e49-b7ff-4cb0-8759-4ef9d893f973",
+    "task_type": "data_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:31:09.189735+00:00",
+    "started_at": "2026-01-24T12:31:09.200702+00:00",
+    "completed_at": "2026-01-24T12:31:24.272736+00:00",
+    "result_data": {
+      "rows_processed": 200,
+      "total_sum": 19900,
+      "average": 99.5,
+      "processing_time": 15,
+      "timestamp": "2026-01-24T12:31:24.272736"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "37509782-8be4-4974-97a4-8a20559c9f44": {
+    "id": "37509782-8be4-4974-97a4-8a20559c9f44",
+    "task_type": "email_simulation",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:31:11.564582+00:00",
+    "started_at": "2026-01-24T12:31:11.580767+00:00",
+    "completed_at": "2026-01-24T12:31:21.775081+00:00",
+    "result_data": {
+      "total_sent": 10,
+      "emails": [
+        {
+          "recipient": "user1@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:31:11.606788",
+          "status": "sent"
+        },
+        {
+          "recipient": "user2@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:31:12.626115",
+          "status": "sent"
+        },
+        {
+          "recipient": "user3@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:31:13.646446",
+          "status": "sent"
+        },
+        {
+          "recipient": "user4@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:31:14.654985",
+          "status": "sent"
+        },
+        {
+          "recipient": "user5@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:31:15.678685",
+          "status": "sent"
+        },
+        {
+          "recipient": "user6@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:31:16.689083",
+          "status": "sent"
+        },
+        {
+          "recipient": "user7@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:31:17.711903",
+          "status": "sent"
+        },
+        {
+          "recipient": "user8@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:31:18.739825",
+          "status": "sent"
+        },
+        {
+          "recipient": "user9@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:31:19.758485",
+          "status": "sent"
+        },
+        {
+          "recipient": "user10@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:31:20.770659",
+          "status": "sent"
+        }
+      ],
+      "timestamp": "2026-01-24T12:31:21.775081"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "653baf8a-bca8-4988-90d2-80d4d8b40a95": {
+    "id": "653baf8a-bca8-4988-90d2-80d4d8b40a95",
+    "task_type": "image_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:31:14.456964+00:00",
+    "started_at": "2026-01-24T12:31:14.479744+00:00",
+    "completed_at": "2026-01-24T12:31:24.605948+00:00",
+    "result_data": {
+      "total_processed": 5,
+      "operation": "resize",
+      "images": [
+        {
+          "image_name": "image_1.jpg",
+          "operation": "resize",
+          "original_size": "843x632",
+          "new_size": "498x307",
+          "processed_at": "2026-01-24T12:31:14.524778"
+        },
+        {
+          "image_name": "image_2.jpg",
+          "operation": "resize",
+          "original_size": "1127x967",
+          "new_size": "679x355",
+          "processed_at": "2026-01-24T12:31:16.566522"
+        },
+        {
+          "image_name": "image_3.jpg",
+          "operation": "resize",
+          "original_size": "1336x797",
+          "new_size": "579x441",
+          "processed_at": "2026-01-24T12:31:18.583398"
+        },
+        {
+          "image_name": "image_4.jpg",
+          "operation": "resize",
+          "original_size": "1995x897",
+          "new_size": "412x596",
+          "processed_at": "2026-01-24T12:31:20.592739"
+        },
+        {
+          "image_name": "image_5.jpg",
+          "operation": "resize",
+          "original_size": "818x965",
+          "new_size": "789x415",
+          "processed_at": "2026-01-24T12:31:22.616271"
+        }
+      ],
+      "timestamp": "2026-01-24T12:31:24.605948"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "0ceafb37-6ef4-465f-92cf-23fab1974cab": {
+    "id": "0ceafb37-6ef4-465f-92cf-23fab1974cab",
+    "task_type": "email_simulation",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:31:20.290493+00:00",
+    "started_at": "2026-01-24T12:31:20.304767+00:00",
+    "completed_at": "2026-01-24T12:31:30.538026+00:00",
+    "result_data": {
+      "total_sent": 10,
+      "emails": [
+        {
+          "recipient": "user1@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:31:20.331809",
+          "status": "sent"
+        },
+        {
+          "recipient": "user2@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:31:21.348301",
+          "status": "sent"
+        },
+        {
+          "recipient": "user3@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:31:22.379336",
+          "status": "sent"
+        },
+        {
+          "recipient": "user4@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:31:23.386178",
+          "status": "sent"
+        },
+        {
+          "recipient": "user5@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:31:24.402798",
+          "status": "sent"
+        },
+        {
+          "recipient": "user6@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:31:25.418312",
+          "status": "sent"
+        },
+        {
+          "recipient": "user7@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:31:26.447803",
+          "status": "sent"
+        },
+        {
+          "recipient": "user8@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:31:27.478458",
+          "status": "sent"
+        },
+        {
+          "recipient": "user9@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:31:28.503548",
+          "status": "sent"
+        },
+        {
+          "recipient": "user10@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:31:29.535082",
+          "status": "sent"
+        }
+      ],
+      "timestamp": "2026-01-24T12:31:30.538026"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "92cc38b9-1ac3-4c77-8bdb-42569a9ffe15": {
+    "id": "92cc38b9-1ac3-4c77-8bdb-42569a9ffe15",
+    "task_type": "data_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:34:41.104420+00:00",
+    "started_at": "2026-01-24T12:34:41.126423+00:00",
+    "completed_at": "2026-01-24T12:34:42.202691+00:00",
+    "result_data": {
+      "rows_processed": 100,
+      "total_sum": 4950,
+      "average": 49.5,
+      "processing_time": 1,
+      "timestamp": "2026-01-24T12:34:42.202674"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "0cbf0d62-e8c7-4f57-b66f-26030138c442": {
+    "id": "0cbf0d62-e8c7-4f57-b66f-26030138c442",
+    "task_type": "data_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:35:17.887652+00:00",
+    "started_at": "2026-01-24T12:35:17.901491+00:00",
+    "completed_at": "2026-01-24T12:35:32.979208+00:00",
+    "result_data": {
+      "rows_processed": 500,
+      "total_sum": 124750,
+      "average": 249.5,
+      "processing_time": 15,
+      "timestamp": "2026-01-24T12:35:32.979190"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "a57f7fa3-d178-41dc-a02d-3147c8c262b2": {
+    "id": "a57f7fa3-d178-41dc-a02d-3147c8c262b2",
+    "task_type": "email_simulation",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:35:37.526461+00:00",
+    "started_at": "2026-01-24T12:35:37.539501+00:00",
+    "completed_at": "2026-01-24T12:35:47.765399+00:00",
+    "result_data": {
+      "total_sent": 10,
+      "emails": [
+        {
+          "recipient": "user1@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:35:37.563134",
+          "status": "sent"
+        },
+        {
+          "recipient": "user2@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:35:38.590213",
+          "status": "sent"
+        },
+        {
+          "recipient": "user3@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:35:39.605041",
+          "status": "sent"
+        },
+        {
+          "recipient": "user4@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:35:40.627924",
+          "status": "sent"
+        },
+        {
+          "recipient": "user5@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:35:41.652700",
+          "status": "sent"
+        },
+        {
+          "recipient": "user6@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:35:42.678943",
+          "status": "sent"
+        },
+        {
+          "recipient": "user7@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:35:43.708815",
+          "status": "sent"
+        },
+        {
+          "recipient": "user8@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:35:44.724453",
+          "status": "sent"
+        },
+        {
+          "recipient": "user9@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:35:45.745477",
+          "status": "sent"
+        },
+        {
+          "recipient": "user10@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:35:46.762844",
+          "status": "sent"
+        }
+      ],
+      "timestamp": "2026-01-24T12:35:47.765381"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "3ab2ceab-1787-4b6c-899e-0da46431b46c": {
+    "id": "3ab2ceab-1787-4b6c-899e-0da46431b46c",
+    "task_type": "data_processing",
+    "status": "CANCELLED",
+    "created_at": "2026-01-24T12:35:39.944565+00:00",
+    "started_at": "2026-01-24T12:35:39.959138+00:00",
+    "completed_at": "2026-01-24T12:35:42.335616+00:00",
+    "result_data": {
+      "rows": 10000
+    },
+    "error_message": null,
+    "progress": 10
+  },
+  "7b7164f9-3d57-4858-b35f-4077e87f7ee4": {
+    "id": "7b7164f9-3d57-4858-b35f-4077e87f7ee4",
+    "task_type": "data_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:35:47.126505+00:00",
+    "started_at": "2026-01-24T12:35:47.141364+00:00",
+    "completed_at": "2026-01-24T12:36:02.223062+00:00",
+    "result_data": {
+      "rows_processed": 200,
+      "total_sum": 19900,
+      "average": 99.5,
+      "processing_time": 15,
+      "timestamp": "2026-01-24T12:36:02.223048"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "a9721b5d-4a1f-44d0-be04-7b3f052a822f": {
+    "id": "a9721b5d-4a1f-44d0-be04-7b3f052a822f",
+    "task_type": "email_simulation",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:35:49.532305+00:00",
+    "started_at": "2026-01-24T12:35:49.550156+00:00",
+    "completed_at": "2026-01-24T12:35:59.788993+00:00",
+    "result_data": {
+      "total_sent": 10,
+      "emails": [
+        {
+          "recipient": "user1@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:35:49.573965",
+          "status": "sent"
+        },
+        {
+          "recipient": "user2@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:35:50.592111",
+          "status": "sent"
+        },
+        {
+          "recipient": "user3@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:35:51.619049",
+          "status": "sent"
+        },
+        {
+          "recipient": "user4@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:35:52.644494",
+          "status": "sent"
+        },
+        {
+          "recipient": "user5@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:35:53.673054",
+          "status": "sent"
+        },
+        {
+          "recipient": "user6@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:35:54.691099",
+          "status": "sent"
+        },
+        {
+          "recipient": "user7@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:35:55.716313",
+          "status": "sent"
+        },
+        {
+          "recipient": "user8@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:35:56.742653",
+          "status": "sent"
+        },
+        {
+          "recipient": "user9@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:35:57.761351",
+          "status": "sent"
+        },
+        {
+          "recipient": "user10@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:35:58.787688",
+          "status": "sent"
+        }
+      ],
+      "timestamp": "2026-01-24T12:35:59.788975"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "ec6e0aa2-a797-442d-abad-45e2128d03f3": {
+    "id": "ec6e0aa2-a797-442d-abad-45e2128d03f3",
+    "task_type": "image_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:35:51.985142+00:00",
+    "started_at": "2026-01-24T12:35:51.998920+00:00",
+    "completed_at": "2026-01-24T12:36:02.112613+00:00",
+    "result_data": {
+      "total_processed": 5,
+      "operation": "resize",
+      "images": [
+        {
+          "image_name": "image_1.jpg",
+          "operation": "resize",
+          "original_size": "1841x1373",
+          "new_size": "596x330",
+          "processed_at": "2026-01-24T12:35:52.023816"
+        },
+        {
+          "image_name": "image_2.jpg",
+          "operation": "resize",
+          "original_size": "1836x1178",
+          "new_size": "579x525",
+          "processed_at": "2026-01-24T12:35:54.043012"
+        },
+        {
+          "image_name": "image_3.jpg",
+          "operation": "resize",
+          "original_size": "1695x1253",
+          "new_size": "636x544",
+          "processed_at": "2026-01-24T12:35:56.062054"
+        },
+        {
+          "image_name": "image_4.jpg",
+          "operation": "resize",
+          "original_size": "1389x1130",
+          "new_size": "438x344",
+          "processed_at": "2026-01-24T12:35:58.081733"
+        },
+        {
+          "image_name": "image_5.jpg",
+          "operation": "resize",
+          "original_size": "1959x1376",
+          "new_size": "500x305",
+          "processed_at": "2026-01-24T12:36:00.105871"
+        }
+      ],
+      "timestamp": "2026-01-24T12:36:02.112596"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "4f044f4e-da86-4d54-bb7b-c8655449b86a": {
+    "id": "4f044f4e-da86-4d54-bb7b-c8655449b86a",
+    "task_type": "email_simulation",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:35:56.763419+00:00",
+    "started_at": "2026-01-24T12:35:56.777104+00:00",
+    "completed_at": "2026-01-24T12:36:07.025784+00:00",
+    "result_data": {
+      "total_sent": 10,
+      "emails": [
+        {
+          "recipient": "user1@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:35:56.804965",
+          "status": "sent"
+        },
+        {
+          "recipient": "user2@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:35:57.823658",
+          "status": "sent"
+        },
+        {
+          "recipient": "user3@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:35:58.850816",
+          "status": "sent"
+        },
+        {
+          "recipient": "user4@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:35:59.867862",
+          "status": "sent"
+        },
+        {
+          "recipient": "user5@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:36:00.894997",
+          "status": "sent"
+        },
+        {
+          "recipient": "user6@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:36:01.923731",
+          "status": "sent"
+        },
+        {
+          "recipient": "user7@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:36:02.946752",
+          "status": "sent"
+        },
+        {
+          "recipient": "user8@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:36:03.970614",
+          "status": "sent"
+        },
+        {
+          "recipient": "user9@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:36:04.988464",
+          "status": "sent"
+        },
+        {
+          "recipient": "user10@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:36:06.014624",
+          "status": "sent"
+        }
+      ],
+      "timestamp": "2026-01-24T12:36:07.025750"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "baf720b0-64af-480b-a69e-ff829de29056": {
+    "id": "baf720b0-64af-480b-a69e-ff829de29056",
+    "task_type": "data_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:37:58.965874+00:00",
+    "started_at": "2026-01-24T12:37:58.983935+00:00",
+    "completed_at": "2026-01-24T12:38:14.118824+00:00",
+    "result_data": {
+      "rows_processed": 1000,
+      "total_sum": 499500,
+      "average": 499.5,
+      "processing_time": 15,
+      "timestamp": "2026-01-24T12:38:14.118811"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "e7fc4c18-1632-4d0d-97f2-b867d1e560da": {
+    "id": "e7fc4c18-1632-4d0d-97f2-b867d1e560da",
+    "task_type": "email_simulation",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:38:02.133363+00:00",
+    "started_at": "2026-01-24T12:38:02.157819+00:00",
+    "completed_at": "2026-01-24T12:38:12.469084+00:00",
+    "result_data": {
+      "total_sent": 10,
+      "emails": [
+        {
+          "recipient": "user1@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:02.199560",
+          "status": "sent"
+        },
+        {
+          "recipient": "user2@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:03.219223",
+          "status": "sent"
+        },
+        {
+          "recipient": "user3@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:04.243635",
+          "status": "sent"
+        },
+        {
+          "recipient": "user4@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:05.262390",
+          "status": "sent"
+        },
+        {
+          "recipient": "user5@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:06.296737",
+          "status": "sent"
+        },
+        {
+          "recipient": "user6@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:07.328905",
+          "status": "sent"
+        },
+        {
+          "recipient": "user7@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:08.363909",
+          "status": "sent"
+        },
+        {
+          "recipient": "user8@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:09.410830",
+          "status": "sent"
+        },
+        {
+          "recipient": "user9@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:10.444890",
+          "status": "sent"
+        },
+        {
+          "recipient": "user10@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:11.466838",
+          "status": "sent"
+        }
+      ],
+      "timestamp": "2026-01-24T12:38:12.469067"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "5459b3d9-2b6d-45d7-af37-92701a1213af": {
+    "id": "5459b3d9-2b6d-45d7-af37-92701a1213af",
+    "task_type": "image_processing",
+    "status": "CANCELLED",
+    "created_at": "2026-01-24T12:38:05.719308+00:00",
+    "started_at": "2026-01-24T12:38:05.737365+00:00",
+    "completed_at": "2026-01-24T12:38:09.514550+00:00",
+    "result_data": {
+      "image_count": 5,
+      "operation": "resize",
+      "processing_time": 10
+    },
+    "error_message": null,
+    "progress": 40
+  },
+  "47a59418-863c-4dc8-917f-8b7aad31ff04": {
+    "id": "47a59418-863c-4dc8-917f-8b7aad31ff04",
+    "task_type": "data_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:38:17.221308+00:00",
+    "started_at": "2026-01-24T12:38:17.235981+00:00",
+    "completed_at": "2026-01-24T12:38:32.349365+00:00",
+    "result_data": {
+      "rows_processed": 500,
+      "total_sum": 124750,
+      "average": 249.5,
+      "processing_time": 15,
+      "timestamp": "2026-01-24T12:38:32.349344"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "53d69d72-8972-433b-960a-ee4180082815": {
+    "id": "53d69d72-8972-433b-960a-ee4180082815",
+    "task_type": "email_simulation",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:38:38.620730+00:00",
+    "started_at": "2026-01-24T12:38:38.636094+00:00",
+    "completed_at": "2026-01-24T12:38:48.875174+00:00",
+    "result_data": {
+      "total_sent": 10,
+      "emails": [
+        {
+          "recipient": "user1@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:38.664283",
+          "status": "sent"
+        },
+        {
+          "recipient": "user2@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:39.682701",
+          "status": "sent"
+        },
+        {
+          "recipient": "user3@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:40.709988",
+          "status": "sent"
+        },
+        {
+          "recipient": "user4@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:41.725769",
+          "status": "sent"
+        },
+        {
+          "recipient": "user5@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:42.744808",
+          "status": "sent"
+        },
+        {
+          "recipient": "user6@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:43.761946",
+          "status": "sent"
+        },
+        {
+          "recipient": "user7@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:44.793755",
+          "status": "sent"
+        },
+        {
+          "recipient": "user8@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:45.820855",
+          "status": "sent"
+        },
+        {
+          "recipient": "user9@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:46.845572",
+          "status": "sent"
+        },
+        {
+          "recipient": "user10@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:47.873380",
+          "status": "sent"
+        }
+      ],
+      "timestamp": "2026-01-24T12:38:48.875155"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "c95bda01-2bba-46b6-adf2-5773fa7e21e8": {
+    "id": "c95bda01-2bba-46b6-adf2-5773fa7e21e8",
+    "task_type": "data_processing",
+    "status": "CANCELLED",
+    "created_at": "2026-01-24T12:38:41.029836+00:00",
+    "started_at": "2026-01-24T12:38:41.047581+00:00",
+    "completed_at": "2026-01-24T12:38:43.937357+00:00",
+    "result_data": {
+      "rows": 10000
+    },
+    "error_message": null,
+    "progress": 10
+  },
+  "1ae0fc8c-2659-4caf-844a-b7e085e067e2": {
+    "id": "1ae0fc8c-2659-4caf-844a-b7e085e067e2",
+    "task_type": "data_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:38:49.815481+00:00",
+    "started_at": "2026-01-24T12:38:49.840674+00:00",
+    "completed_at": "2026-01-24T12:39:04.977675+00:00",
+    "result_data": {
+      "rows_processed": 200,
+      "total_sum": 19900,
+      "average": 99.5,
+      "processing_time": 15,
+      "timestamp": "2026-01-24T12:39:04.977657"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "3f15ddfa-20bf-4309-b655-cbb840b7ddd1": {
+    "id": "3f15ddfa-20bf-4309-b655-cbb840b7ddd1",
+    "task_type": "email_simulation",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:38:52.681468+00:00",
+    "started_at": "2026-01-24T12:38:52.709467+00:00",
+    "completed_at": "2026-01-24T12:39:03.034894+00:00",
+    "result_data": {
+      "total_sent": 10,
+      "emails": [
+        {
+          "recipient": "user1@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:52.764704",
+          "status": "sent"
+        },
+        {
+          "recipient": "user2@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:53.797449",
+          "status": "sent"
+        },
+        {
+          "recipient": "user3@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:54.818675",
+          "status": "sent"
+        },
+        {
+          "recipient": "user4@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:55.857396",
+          "status": "sent"
+        },
+        {
+          "recipient": "user5@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:56.891167",
+          "status": "sent"
+        },
+        {
+          "recipient": "user6@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:57.912347",
+          "status": "sent"
+        },
+        {
+          "recipient": "user7@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:58.931843",
+          "status": "sent"
+        },
+        {
+          "recipient": "user8@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:38:59.965904",
+          "status": "sent"
+        },
+        {
+          "recipient": "user9@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:39:00.997404",
+          "status": "sent"
+        },
+        {
+          "recipient": "user10@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:39:02.029868",
+          "status": "sent"
+        }
+      ],
+      "timestamp": "2026-01-24T12:39:03.034870"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "1a4e3692-857f-4383-828b-6cf020fa44b2": {
+    "id": "1a4e3692-857f-4383-828b-6cf020fa44b2",
+    "task_type": "image_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:38:55.480003+00:00",
+    "started_at": "2026-01-24T12:38:55.498342+00:00",
+    "completed_at": "2026-01-24T12:39:05.648212+00:00",
+    "result_data": {
+      "total_processed": 5,
+      "operation": "resize",
+      "images": [
+        {
+          "image_name": "image_1.jpg",
+          "operation": "resize",
+          "original_size": "1620x1309",
+          "new_size": "470x464",
+          "processed_at": "2026-01-24T12:38:55.531614"
+        },
+        {
+          "image_name": "image_2.jpg",
+          "operation": "resize",
+          "original_size": "1631x774",
+          "new_size": "791x551",
+          "processed_at": "2026-01-24T12:38:57.562564"
+        },
+        {
+          "image_name": "image_3.jpg",
+          "operation": "resize",
+          "original_size": "1672x1136",
+          "new_size": "752x566",
+          "processed_at": "2026-01-24T12:38:59.593494"
+        },
+        {
+          "image_name": "image_4.jpg",
+          "operation": "resize",
+          "original_size": "1120x716",
+          "new_size": "530x472",
+          "processed_at": "2026-01-24T12:39:01.623214"
+        },
+        {
+          "image_name": "image_5.jpg",
+          "operation": "resize",
+          "original_size": "1731x905",
+          "new_size": "644x398",
+          "processed_at": "2026-01-24T12:39:03.641522"
+        }
+      ],
+      "timestamp": "2026-01-24T12:39:05.648178"
+    },
+    "error_message": null,
+    "progress": 100
+  },
+  "f6a77c1d-a73d-439f-a2d5-64c47cc942cc": {
+    "id": "f6a77c1d-a73d-439f-a2d5-64c47cc942cc",
+    "task_type": "email_simulation",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:39:00.998410+00:00",
+    "started_at": "2026-01-24T12:39:01.016259+00:00",
+    "completed_at": "2026-01-24T12:39:11.299245+00:00",
+    "result_data": {
+      "total_sent": 10,
+      "emails": [
+        {
+          "recipient": "user1@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:39:01.052585",
+          "status": "sent"
+        },
+        {
+          "recipient": "user2@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:39:02.087167",
+          "status": "sent"
+        },
+        {
+          "recipient": "user3@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:39:03.109593",
+          "status": "sent"
+        },
+        {
+          "recipient": "user4@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:39:04.133819",
+          "status": "sent"
+        },
+        {
+          "recipient": "user5@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:39:05.162201",
+          "status": "sent"
+        },
+        {
+          "recipient": "user6@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:39:06.197031",
+          "status": "sent"
+        },
+        {
+          "recipient": "user7@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:39:07.214041",
+          "status": "sent"
+        },
+        {
+          "recipient": "user8@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:39:08.236701",
+          "status": "sent"
+        },
+        {
+          "recipient": "user9@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:39:09.264384",
+          "status": "sent"
+        },
+        {
+          "recipient": "user10@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:39:10.294565",
+          "status": "sent"
+        }
+      ],
+      "timestamp": "2026-01-24T12:39:11.299218"
+    },
+    "error_message": null,
+    "progress": 100
+  }
+}

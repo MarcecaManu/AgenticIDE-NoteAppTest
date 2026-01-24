@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Chat Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Login Screen -->
+        <div id="login-screen" class="screen">
+            <div class="card">
+                <h1>🚀 Real-time Chat</h1>
+                <p class="subtitle">Enter your username to get started</p>
+                <input type="text" id="username-input" placeholder="Enter your username" maxlength="50">
+                <button id="login-btn" class="btn btn-primary">Continue</button>
+            </div>
+        </div>
+
+        <!-- Room Selection Screen -->
+        <div id="room-screen" class="screen hidden">
+            <div class="card">
+                <h1>Chat Rooms</h1>
+                <div class="user-info">
+                    <span>Logged in as: <strong id="current-username"></strong></span>
+                    <button id="logout-btn" class="btn btn-secondary">Logout</button>
+                </div>
+                
+                <div class="room-actions">
+                    <h2>Create New Room</h2>
+                    <div class="input-group">
+                        <input type="text" id="room-name-input" placeholder="Room name" maxlength="100">
+                        <button id="create-room-btn" class="btn btn-primary">Create</button>
+                    </div>
+                </div>
+
+                <div class="room-list">
+                    <h2>Available Rooms</h2>
+                    <div id="rooms-container" class="rooms-container">
+                        <p class="loading">Loading rooms...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Screen -->
+        <div id="chat-screen" class="screen hidden">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="room-info">
+                        <button id="back-btn" class="btn btn-secondary">← Back</button>
+                        <h2 id="room-title"></h2>
+                        <button id="delete-room-btn" class="btn btn-danger">Delete Room</button>
+                    </div>
+                    <div class="connection-status">
+                        <span id="connection-indicator" class="indicator disconnected"></span>
+                        <span id="connection-text">Disconnected</span>
+                    </div>
+                </div>
+
+                <div class="chat-main">
+                    <div class="messages-panel">
+                        <div id="messages-container" class="messages-container"></div>
+                        <div id="typing-indicator" class="typing-indicator hidden"></div>
+                    </div>
+
+                    <div class="users-panel">
+                        <h3>Online Users (<span id="user-count">0</span>)</h3>
+                        <div id="users-list" class="users-list"></div>
+                    </div>
+                </div>
+
+                <div class="chat-input">
+                    <input type="text" id="message-input" placeholder="Type your message..." maxlength="1000">
+                    <button id="send-btn" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,10 @@
+Project,ExecutionTime,CorrectionTime,AutomaticAnalisysTime,Corrections,APIErrors,PersistencyErrors,FrontendErrors,TestsErrors,ProjectStructureErrors,OtherErrors,Regressions
+copilot1,6.10,11.05,0.20,1,0,0,0,1,0,0,0
+copilot2,7.00,7.30,0.20,1,0,0,0,1,0,0,0
+copilot3,10.52,7.00,0.10,1,1,0,0,1,0,0,0
+cursor1,2.44,6.30,0.20,1,0,0,0,1,0,0,0
+cursor2,2.54,6.10,0.20,1,0,0,0,1,0,0,0
+cursor3,2.00,4.20,0.20,1,0,0,0,1,0,0,0
+windsurf1,13.50,12.05,0.33,2,,0,0,2,0,0,0
+windsurf2,11.40,11.40,0.23,1,0,0,1,1,0,0,0
+windsurf3,14.20,12.50,0.30,2,0,0,2,1,0,0,0

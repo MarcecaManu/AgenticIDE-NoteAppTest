@@ -1,0 +1,165 @@
+Full-Stack Authentication Module - Project Structure
+=====================================================
+
+cursor2/
+│
+├── backend/                          # FastAPI Backend Application
+│   ├── __init__.py                  # Package marker
+│   ├── main.py                      # FastAPI app + API endpoints
+│   ├── auth.py                      # Authentication logic & JWT handling
+│   ├── models.py                    # SQLAlchemy User model
+│   ├── schemas.py                   # Pydantic validation schemas
+│   ├── database.py                  # Database configuration
+│   ├── requirements.txt             # Python dependencies
+│   └── [auth_database.db]           # SQLite database (created on first run)
+│
+├── frontend/                         # Plain HTML/CSS/JS Frontend
+│   ├── index.html                   # Main page with forms
+│   ├── styles.css                   # Modern responsive styling
+│   ├── app.js                       # API calls & UI updates
+│   └── README.md                    # Frontend documentation
+│
+├── tests/                           # Automated Test Suite
+│   ├── __init__.py                 # Package marker
+│   ├── test_auth.py                # 17 comprehensive pytest tests
+│   └── [test_auth_database.db]     # Test database (created during tests)
+│
+├── README.md                        # Complete project documentation
+├── QUICKSTART.md                    # Quick start guide
+├── PROJECT_SUMMARY.md               # Requirements checklist & features
+├── STRUCTURE.txt                    # This file - project layout
+├── .gitignore                       # Git ignore rules
+│
+├── start_backend.bat               # Windows: Start backend server
+├── start_backend.sh                # Unix: Start backend server
+├── start_frontend.bat              # Windows: Start frontend server
+├── start_frontend.sh               # Unix: Start frontend server
+├── run_tests.bat                   # Windows: Run test suite
+└── run_tests.sh                    # Unix: Run test suite
+
+
+API ENDPOINTS
+=============
+
+Base URL: http://localhost:8000
+
+POST   /api/auth/register    Register new user
+POST   /api/auth/login       Login and get JWT token
+POST   /api/auth/logout      Invalidate token
+GET    /api/auth/profile     Get user profile (requires auth)
+GET    /                     Root endpoint
+GET    /docs                 Swagger API documentation
+GET    /redoc                ReDoc API documentation
+
+
+DATABASE SCHEMA
+===============
+
+Table: users
+- id (INTEGER, PRIMARY KEY)
+- username (VARCHAR, UNIQUE, INDEXED)
+- hashed_password (VARCHAR)
+- created_at (DATETIME)
+
+
+AUTHENTICATION FLOW
+===================
+
+1. Register: POST /api/auth/register
+   → Creates user with hashed password
+   → Returns user profile
+
+2. Login: POST /api/auth/login
+   → Validates credentials
+   → Returns JWT access token
+
+3. Access Protected Resources: GET /api/auth/profile
+   → Requires: Authorization: Bearer <token>
+   → Returns user profile
+
+4. Logout: POST /api/auth/logout
+   → Requires: Authorization: Bearer <token>
+   → Adds token to blacklist
+   → Token becomes invalid
+
+
+SECURITY FEATURES
+=================
+
+✓ Bcrypt password hashing
+✓ JWT token authentication
+✓ Token expiration (30 minutes)
+✓ Token blacklist (logout)
+✓ Input validation
+✓ CORS configuration
+✓ Bearer token scheme
+✓ Protected endpoints
+
+
+TEST COVERAGE
+=============
+
+✓ User registration (success)
+✓ User registration (duplicate username)
+✓ User registration (validation errors)
+✓ User login (success)
+✓ User login (wrong password)
+✓ User login (non-existent user)
+✓ Get profile (authenticated)
+✓ Get profile (no token)
+✓ Get profile (invalid token)
+✓ Logout (success)
+✓ Logout (token invalidation)
+✓ Logout (no token)
+✓ Password hashing verification
+✓ Complete authentication flow
+
+
+TECHNOLOGY STACK
+================
+
+Backend:
+- FastAPI (Web framework)
+- SQLAlchemy (ORM)
+- SQLite (Database)
+- Passlib + Bcrypt (Password hashing)
+- Python-JOSE (JWT)
+- Uvicorn (ASGI server)
+- Pytest (Testing)
+
+Frontend:
+- HTML5
+- CSS3 (Modern gradient design)
+- Vanilla JavaScript (Fetch API)
+- LocalStorage (Token persistence)
+
+
+PORTS
+=====
+
+Backend:  http://localhost:8000
+Frontend: http://localhost:8080
+
+
+QUICK START
+===========
+
+Windows:
+1. Double-click start_backend.bat
+2. Double-click start_frontend.bat
+3. Open http://localhost:8080
+
+Linux/Mac:
+1. ./start_backend.sh
+2. ./start_frontend.sh
+3. Open http://localhost:8080
+
+
+FILES CREATED AT RUNTIME
+========================
+
+backend/auth_database.db       # Production database
+tests/test_auth_database.db    # Test database
+backend/venv/                  # Virtual environment
+__pycache__/                   # Python cache files
+

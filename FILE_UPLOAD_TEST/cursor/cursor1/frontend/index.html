@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload & Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>File Upload & Management System</h1>
+        </header>
+
+        <main>
+            <!-- Upload Section -->
+            <section class="upload-section">
+                <h2>Upload Files</h2>
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-content">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        <p>Drag and drop files here or click to browse</p>
+                        <p class="upload-hint">Max 10MB • Images, PDFs, and text files only</p>
+                    </div>
+                    <input type="file" id="fileInput" multiple accept="image/*,.pdf,.txt,.md,.csv,.json,.xml,.html,.css,.js,.log">
+                </div>
+                <div id="uploadProgress" class="upload-progress hidden"></div>
+                <div id="errorMessage" class="error-message hidden"></div>
+            </section>
+
+            <!-- Files List Section -->
+            <section class="files-section">
+                <h2>Uploaded Files</h2>
+                <div id="filesList" class="files-list">
+                    <p class="empty-state">No files uploaded yet. Upload your first file above!</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+

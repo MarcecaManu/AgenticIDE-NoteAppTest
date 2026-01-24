@@ -1,0 +1,13 @@
+@echo off
+echo Starting FastAPI Backend...
+cd backend
+if not exist .venv (
+    echo Creating virtual environment...
+    uv venv --python 3.12
+)
+call .venv\Scripts\activate
+echo Installing dependencies...
+uv pip install -r requirements.txt
+echo Starting server...
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+

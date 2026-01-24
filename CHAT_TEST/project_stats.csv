@@ -1,0 +1,10 @@
+Project,Security,Reliability,Maintainability,Coverage (%),Duplications (%),Security Hotspots
+copilot1,0,4,5,91.2,0,0
+copilot2,0,1,1,88.1,0,0
+copilot3,0,4,6,90.5,0,0
+windsurf1,
+windsurf2,
+windsurf3,
+cursor1,0,2,3,93.5,0,0
+cursor2,0,5,6,90.0,0,0
+cursor3,0,0,2,84.2,0,0

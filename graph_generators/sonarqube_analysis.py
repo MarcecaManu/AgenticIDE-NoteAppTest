@@ -113,6 +113,7 @@ def run_sonarqube_analysis(input_csv, output_dir):
 
 def run_all_sonarqube_analyses():
     use_cases = [
+        'CRUD_TEST',
         'AUTH_TEST',
         'CHAT_TEST',
         'FILE_UPLOAD_TEST',

@@ -1,0 +1,6 @@
+,Performance_Score,Performance_Score,Accessibility_Score,Accessibility_Score,Best Practices_Score,Best Practices_Score,SEO_Score,SEO_Score,Overall_Score,Overall_Score
+,mean,std,mean,std,mean,std,mean,std,mean,std
+IDE,,,,,,,,,,
+copilot,100.0,0.0,84.67,12.06,96.0,0.0,90.0,0.0,92.67,3.01
+cursor,100.0,0.0,81.0,5.0,96.0,0.0,90.0,0.0,91.75,1.25
+windsurf,100.0,0.0,79.67,4.04,96.0,0.0,90.0,0.0,91.42,1.01

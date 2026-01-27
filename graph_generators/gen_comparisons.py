@@ -122,6 +122,7 @@ def genera_tutti_i_grafici():
     
     # Mapping cartelle -> nomi use case
     use_cases = {
+        'CRUD_TEST': 'CRUD',
         'AUTH_TEST': 'Autenticazione',
         'CHAT_TEST': 'Chat',
         'FILE_UPLOAD_TEST': 'File Hosting',

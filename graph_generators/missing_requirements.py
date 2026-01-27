@@ -83,11 +83,70 @@ def genera_grafico_requisiti_mancanti(csv_path, output_path, use_case_title, oth
     print(f"✓ Grafico salvato in: {output_path}")
     plt.close()
 
+def genera_grafico_regressioni_per_ide(csv_path, output_path, use_case_title):
+    """
+    Genera un grafico a barre del numero totale di regressioni per IDE.
+    
+    Parametri:
+    - csv_path: percorso del file CSV con i dati
+    - output_path: percorso dove salvare il grafico generato
+    - use_case_title: titolo del caso d'uso da mostrare nel grafico
+    """
+    if not os.path.exists(csv_path):
+        raise FileNotFoundError(f"File non trovato: {csv_path}")
+
+    df = pd.read_csv(csv_path)
+
+    # Verifica che esista la colonna regressions
+    if 'Regressions' not in df.columns:
+        print(f"⚠ Colonna 'regressions' non trovata in {csv_path}")
+        return
+
+    # Estrai il nome dell'IDE dal nome del progetto (rimuove i numeri finali)
+    df['IDE'] = df['Project'].str.replace(r'\d+$', '', regex=True)
+
+    # Calcola il totale delle regressioni per IDE
+    grouped = df.groupby('IDE')['Regressions'].sum().reset_index()
+    grouped = grouped.sort_values('IDE')
+    ide_labels = [ide.capitalize() for ide in grouped['IDE']]
+
+    # Grafico a barre
+    fig, ax = plt.subplots(figsize=(10, 3.5))
+    bars = ax.bar(ide_labels, grouped['Regressions'], color='#d62728', zorder=1)
+
+    # Aggiungi i valori sopra le barre
+    for bar in bars:
+        height = bar.get_height()
+        if height > 0:
+            ax.text(bar.get_x() + bar.get_width()/2., height,
+                   f'{int(height)}',
+                   ha='center', va='bottom', fontsize=10)
+
+    # Imposta margine superiore e tick interi
+    y_max = int(np.ceil(grouped['Regressions'].max() * 1.15))
+    ax.set_ylim(0, y_max)
+    if y_max <= 10:
+        ax.set_yticks(np.arange(0, y_max + 1, 1))
+    else:
+        ax.set_yticks(np.arange(0, y_max + 2, 2))
+
+    # Griglia tratteggiata
+    ax.yaxis.grid(True, linestyle='--', linewidth=0.8, color='gray', alpha=0.5, zorder=10)
+    ax.set_axisbelow(False)
+
+    ax.set_ylabel('Numero di regressioni')
+    ax.set_title(f'Numero totale di regressioni per IDE\n{use_case_title}')
+    plt.tight_layout()
+    plt.savefig(output_path, dpi=300, bbox_inches='tight')
+    print(f"✓ Grafico regressioni salvato in: {output_path}")
+    plt.close()
+
 def genera_tutti_i_grafici_requisiti():
     """
     Genera automaticamente tutti i grafici dei requisiti mancanti per i diversi use case.
     """
     use_cases = {
+        'CRUD_TEST': ('CRUD', 'Searchbar'),
         'AUTH_TEST': ('Autenticazione', 'Sicurezza credenziali'),
         'CHAT_TEST': ('Chat', 'Gestione connessioni'),
         'FILE_UPLOAD_TEST': ('File Hosting', 'Validazione files'),
@@ -109,9 +168,12 @@ def genera_tutti_i_grafici_requisiti():
         graphs_dir = os.path.join(folder_path, 'graphs')
         os.makedirs(graphs_dir, exist_ok=True)
         output_path = os.path.join(graphs_dir, 'missing_requirements_graph.png')
+        output_path_regressions = os.path.join(graphs_dir, 'regressions_per_ide_graph.png')
         try:
             print(f"\n📊 Generazione grafico requisiti mancanti per {use_case_name}...")
             genera_grafico_requisiti_mancanti(csv_path, output_path, use_case_name, other_error_label)
+            print(f"📊 Generazione grafico regressioni per {use_case_name}...")
+            genera_grafico_regressioni_per_ide(csv_path, output_path_regressions, use_case_name)
             grafici_generati += 1
         except Exception as e:
             print(f"✗ Errore nella generazione del grafico per {folder}: {e}")

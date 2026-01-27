@@ -1,0 +1,16 @@
+Project,Security,Reliability,Maintainability,Coverage (%),Duplications (%),Security Hotspots
+copilot1,0,0,2,85.9,0.0,0
+copilot2,0,0,1,48.3,0.0,0
+copilot3,0,0,1,56.2,0.0,0
+cursor1,0,2,3,45.2,0.0,0
+cursor2,0,2,3,52.4,0.0,0
+cursor3,0,0,1,55.6,0.0,0
+qodo1,0,1,3,36.8,0.0,0
+qodo2,0,1,2,48.6,0.0,0
+qodo3,0,0,2,48.1,0.0,0
+windsurf1,0,1,2,54.6,0.0,0
+windsurf2,0,0,5,36.8,0.0,0
+windsurf3,0,1,2,52.9,0.0,0
+replit1,0,0,3,43.4,0.0,0
+replit2,0,0,2,29.1,0.0,1
+replit3,0,2,6,0.0,14.6,7

@@ -1,0 +1,862 @@
+{
+  "0ec20d31-de3c-48cd-9a0c-7c6341413e20": {
+    "id": "0ec20d31-de3c-48cd-9a0c-7c6341413e20",
+    "task_type": "data_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T11:43:54.541103+00:00",
+    "started_at": "2026-01-24T11:43:54.641995+00:00",
+    "completed_at": "2026-01-24T11:44:09.871516+00:00",
+    "result_data": {
+      "total_rows": 1000,
+      "processed_rows": 1000,
+      "statistics": {
+        "sum": 49500,
+        "average": 49.5,
+        "min": 0,
+        "max": 99
+      }
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "rows": 1000
+    }
+  },
+  "3a900b1c-fe88-4483-bc1f-2dfd9123f39c": {
+    "id": "3a900b1c-fe88-4483-bc1f-2dfd9123f39c",
+    "task_type": "email_simulation",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T11:44:01.666245+00:00",
+    "started_at": "2026-01-24T11:44:01.790407+00:00",
+    "completed_at": "2026-01-24T11:44:05.835137+00:00",
+    "result_data": {
+      "total_emails": 2,
+      "sent_emails": [
+        {
+          "recipient": "user1@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T11:44:03.797434+00:00",
+          "status": "sent"
+        },
+        {
+          "recipient": "user2@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T11:44:05.826563+00:00",
+          "status": "sent"
+        }
+      ],
+      "success_count": 2
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "recipients": [
+        "user1@example.com",
+        "user2@example.com"
+      ],
+      "subject": "Test Email"
+    }
+  },
+  "1fbb11d0-b0dd-4073-9fc9-a7ccd5795b1e": {
+    "id": "1fbb11d0-b0dd-4073-9fc9-a7ccd5795b1e",
+    "task_type": "image_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T11:44:03.723906+00:00",
+    "started_at": "2026-01-24T11:44:03.850116+00:00",
+    "completed_at": "2026-01-24T11:44:12.906209+00:00",
+    "result_data": {
+      "total_images": 3,
+      "processed_images": [
+        {
+          "original": "image1.jpg",
+          "operation": "resize",
+          "output": "processed_image1.jpg",
+          "size": "800x600",
+          "processed_at": "2026-01-24T11:44:06.852381+00:00"
+        },
+        {
+          "original": "image2.jpg",
+          "operation": "resize",
+          "output": "processed_image2.jpg",
+          "size": "800x600",
+          "processed_at": "2026-01-24T11:44:09.883888+00:00"
+        },
+        {
+          "original": "image3.jpg",
+          "operation": "resize",
+          "output": "processed_image3.jpg",
+          "size": "800x600",
+          "processed_at": "2026-01-24T11:44:12.896332+00:00"
+        }
+      ],
+      "operation": "resize"
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "images": [
+        "image1.jpg",
+        "image2.jpg",
+        "image3.jpg"
+      ],
+      "operation": "resize"
+    }
+  },
+  "f03cbc39-cd10-44fa-a9ab-9e987b0c88ae": {
+    "id": "f03cbc39-cd10-44fa-a9ab-9e987b0c88ae",
+    "task_type": "data_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T11:46:54.022805+00:00",
+    "started_at": "2026-01-24T11:46:54.136133+00:00",
+    "completed_at": "2026-01-24T11:47:09.316140+00:00",
+    "result_data": {
+      "total_rows": 500,
+      "processed_rows": 500,
+      "statistics": {
+        "sum": 24750,
+        "average": 49.5,
+        "min": 0,
+        "max": 99
+      }
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "rows": 500
+    }
+  },
+  "c8dcf1e4-2720-4072-8296-93bd6f99f587": {
+    "id": "c8dcf1e4-2720-4072-8296-93bd6f99f587",
+    "task_type": "email_simulation",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T11:47:13.535933+00:00",
+    "started_at": "2026-01-24T11:47:13.644011+00:00",
+    "completed_at": "2026-01-24T11:47:19.712415+00:00",
+    "result_data": {
+      "total_emails": 3,
+      "sent_emails": [
+        {
+          "recipient": "user1@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T11:47:15.661953+00:00",
+          "status": "sent"
+        },
+        {
+          "recipient": "user2@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T11:47:17.687203+00:00",
+          "status": "sent"
+        },
+        {
+          "recipient": "user3@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T11:47:19.702952+00:00",
+          "status": "sent"
+        }
+      ],
+      "success_count": 3
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "recipients": [
+        "user1@example.com",
+        "user2@example.com",
+        "user3@example.com"
+      ],
+      "subject": "Test Email"
+    }
+  },
+  "ba64689d-3973-44f4-8ac0-ffbf996d87cd": {
+    "id": "ba64689d-3973-44f4-8ac0-ffbf996d87cd",
+    "task_type": "data_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T11:47:15.885660+00:00",
+    "started_at": "2026-01-24T11:47:16.002915+00:00",
+    "completed_at": "2026-01-24T11:47:31.184795+00:00",
+    "result_data": {
+      "total_rows": 10000,
+      "processed_rows": 10000,
+      "statistics": {
+        "sum": 495000,
+        "average": 49.5,
+        "min": 0,
+        "max": 99
+      }
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "rows": 10000
+    }
+  },
+  "17299a99-ab3b-493d-933f-27277176eb90": {
+    "id": "17299a99-ab3b-493d-933f-27277176eb90",
+    "task_type": "data_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T11:47:21.226612+00:00",
+    "started_at": "2026-01-24T11:47:21.351741+00:00",
+    "completed_at": "2026-01-24T11:47:36.565108+00:00",
+    "result_data": {
+      "total_rows": 200,
+      "processed_rows": 200,
+      "statistics": {
+        "sum": 9900,
+        "average": 49.5,
+        "min": 0,
+        "max": 99
+      }
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "rows": 200
+    }
+  },
+  "29a34601-c3e9-4f16-8af2-897e8a0fcffc": {
+    "id": "29a34601-c3e9-4f16-8af2-897e8a0fcffc",
+    "task_type": "email_simulation",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T11:47:23.605722+00:00",
+    "started_at": "2026-01-24T11:47:23.717959+00:00",
+    "completed_at": "2026-01-24T11:47:29.797594+00:00",
+    "result_data": {
+      "total_emails": 3,
+      "sent_emails": [
+        {
+          "recipient": "user1@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T11:47:25.736148+00:00",
+          "status": "sent"
+        },
+        {
+          "recipient": "user2@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T11:47:27.765623+00:00",
+          "status": "sent"
+        },
+        {
+          "recipient": "user3@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T11:47:29.779923+00:00",
+          "status": "sent"
+        }
+      ],
+      "success_count": 3
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "recipients": [
+        "user1@example.com",
+        "user2@example.com",
+        "user3@example.com"
+      ],
+      "subject": "Test Email"
+    }
+  },
+  "7a2dff31-d06d-4027-be37-fbe0697422c8": {
+    "id": "7a2dff31-d06d-4027-be37-fbe0697422c8",
+    "task_type": "image_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T11:47:25.970097+00:00",
+    "started_at": "2026-01-24T11:47:26.084216+00:00",
+    "completed_at": "2026-01-24T11:47:32.142889+00:00",
+    "result_data": {
+      "total_images": 2,
+      "processed_images": [
+        {
+          "original": "img1.jpg",
+          "operation": "resize",
+          "output": "processed_img1.jpg",
+          "size": "800x600",
+          "processed_at": "2026-01-24T11:47:29.108229+00:00"
+        },
+        {
+          "original": "img2.jpg",
+          "operation": "resize",
+          "output": "processed_img2.jpg",
+          "size": "800x600",
+          "processed_at": "2026-01-24T11:47:32.130866+00:00"
+        }
+      ],
+      "operation": "resize"
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "images": [
+        "img1.jpg",
+        "img2.jpg"
+      ],
+      "operation": "resize"
+    }
+  },
+  "e3f58977-707a-4e62-9217-3b5d710c6a15": {
+    "id": "e3f58977-707a-4e62-9217-3b5d710c6a15",
+    "task_type": "email_simulation",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T11:47:30.725460+00:00",
+    "started_at": "2026-01-24T11:47:30.834525+00:00",
+    "completed_at": "2026-01-24T11:47:32.878338+00:00",
+    "result_data": {
+      "total_emails": 1,
+      "sent_emails": [
+        {
+          "recipient": "test@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T11:47:32.867972+00:00",
+          "status": "sent"
+        }
+      ],
+      "success_count": 1
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "recipients": [
+        "test@example.com"
+      ],
+      "subject": "Test"
+    }
+  },
+  "6e4c9682-ab3f-42f6-b37c-4a0db84645bf": {
+    "id": "6e4c9682-ab3f-42f6-b37c-4a0db84645bf",
+    "task_type": "data_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T11:48:30.291720+00:00",
+    "started_at": "2026-01-24T11:48:30.404525+00:00",
+    "completed_at": "2026-01-24T11:48:45.576908+00:00",
+    "result_data": {
+      "total_rows": 500,
+      "processed_rows": 500,
+      "statistics": {
+        "sum": 24750,
+        "average": 49.5,
+        "min": 0,
+        "max": 99
+      }
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "rows": 500
+    }
+  },
+  "7030f440-f264-4ea9-9ae5-d75f5110044d": {
+    "id": "7030f440-f264-4ea9-9ae5-d75f5110044d",
+    "task_type": "email_simulation",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T11:48:50.975389+00:00",
+    "started_at": "2026-01-24T11:48:51.082259+00:00",
+    "completed_at": "2026-01-24T11:48:57.171113+00:00",
+    "result_data": {
+      "total_emails": 3,
+      "sent_emails": [
+        {
+          "recipient": "user1@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T11:48:53.101101+00:00",
+          "status": "sent"
+        },
+        {
+          "recipient": "user2@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T11:48:55.134336+00:00",
+          "status": "sent"
+        },
+        {
+          "recipient": "user3@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T11:48:57.154810+00:00",
+          "status": "sent"
+        }
+      ],
+      "success_count": 3
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "recipients": [
+        "user1@example.com",
+        "user2@example.com",
+        "user3@example.com"
+      ],
+      "subject": "Test Email"
+    }
+  },
+  "a4bc3bf1-be27-454f-bed9-053d08483fb0": {
+    "id": "a4bc3bf1-be27-454f-bed9-053d08483fb0",
+    "task_type": "data_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T11:48:53.508131+00:00",
+    "started_at": "2026-01-24T11:48:53.645603+00:00",
+    "completed_at": "2026-01-24T11:49:08.874952+00:00",
+    "result_data": {
+      "total_rows": 10000,
+      "processed_rows": 10000,
+      "statistics": {
+        "sum": 495000,
+        "average": 49.5,
+        "min": 0,
+        "max": 99
+      }
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "rows": 10000
+    }
+  },
+  "4e1f24b7-e80f-4472-a3a5-001043489bd3": {
+    "id": "4e1f24b7-e80f-4472-a3a5-001043489bd3",
+    "task_type": "data_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T11:48:58.720819+00:00",
+    "started_at": "2026-01-24T11:48:58.846068+00:00",
+    "completed_at": "2026-01-24T11:49:14.071978+00:00",
+    "result_data": {
+      "total_rows": 200,
+      "processed_rows": 200,
+      "statistics": {
+        "sum": 9900,
+        "average": 49.5,
+        "min": 0,
+        "max": 99
+      }
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "rows": 200
+    }
+  },
+  "0cdc8f36-0994-477c-8596-58f1cf4a5c4d": {
+    "id": "0cdc8f36-0994-477c-8596-58f1cf4a5c4d",
+    "task_type": "email_simulation",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T11:49:01.137305+00:00",
+    "started_at": "2026-01-24T11:49:01.258604+00:00",
+    "completed_at": "2026-01-24T11:49:07.331095+00:00",
+    "result_data": {
+      "total_emails": 3,
+      "sent_emails": [
+        {
+          "recipient": "user1@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T11:49:03.268443+00:00",
+          "status": "sent"
+        },
+        {
+          "recipient": "user2@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T11:49:05.281619+00:00",
+          "status": "sent"
+        },
+        {
+          "recipient": "user3@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T11:49:07.318586+00:00",
+          "status": "sent"
+        }
+      ],
+      "success_count": 3
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "recipients": [
+        "user1@example.com",
+        "user2@example.com",
+        "user3@example.com"
+      ],
+      "subject": "Test Email"
+    }
+  },
+  "ac5b22de-3650-4fcf-92cd-1fd5d8d6ec97": {
+    "id": "ac5b22de-3650-4fcf-92cd-1fd5d8d6ec97",
+    "task_type": "image_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T11:49:03.586129+00:00",
+    "started_at": "2026-01-24T11:49:03.718288+00:00",
+    "completed_at": "2026-01-24T11:49:09.785313+00:00",
+    "result_data": {
+      "total_images": 2,
+      "processed_images": [
+        {
+          "original": "img1.jpg",
+          "operation": "resize",
+          "output": "processed_img1.jpg",
+          "size": "800x600",
+          "processed_at": "2026-01-24T11:49:06.736273+00:00"
+        },
+        {
+          "original": "img2.jpg",
+          "operation": "resize",
+          "output": "processed_img2.jpg",
+          "size": "800x600",
+          "processed_at": "2026-01-24T11:49:09.769710+00:00"
+        }
+      ],
+      "operation": "resize"
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "images": [
+        "img1.jpg",
+        "img2.jpg"
+      ],
+      "operation": "resize"
+    }
+  },
+  "08fd8c37-417e-41f8-bec1-9eaa7651da49": {
+    "id": "08fd8c37-417e-41f8-bec1-9eaa7651da49",
+    "task_type": "email_simulation",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T11:49:08.897505+00:00",
+    "started_at": "2026-01-24T11:49:09.027126+00:00",
+    "completed_at": "2026-01-24T11:49:11.080956+00:00",
+    "result_data": {
+      "total_emails": 1,
+      "sent_emails": [
+        {
+          "recipient": "test@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T11:49:11.068668+00:00",
+          "status": "sent"
+        }
+      ],
+      "success_count": 1
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "recipients": [
+        "test@example.com"
+      ],
+      "subject": "Test"
+    }
+  },
+  "3655f94d-65fc-426f-b604-9ee2f573a402": {
+    "id": "3655f94d-65fc-426f-b604-9ee2f573a402",
+    "task_type": "data_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:05:29.614869+00:00",
+    "started_at": "2026-01-24T12:05:29.762638+00:00",
+    "completed_at": "2026-01-24T12:05:44.937317+00:00",
+    "result_data": {
+      "total_rows": 500,
+      "processed_rows": 500,
+      "statistics": {
+        "sum": 24750,
+        "average": 49.5,
+        "min": 0,
+        "max": 99
+      }
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "rows": 500
+    }
+  },
+  "c81320be-0ca8-4bde-9e99-f858be7240f1": {
+    "id": "c81320be-0ca8-4bde-9e99-f858be7240f1",
+    "task_type": "email_simulation",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:05:49.189883+00:00",
+    "started_at": "2026-01-24T12:05:49.293635+00:00",
+    "completed_at": "2026-01-24T12:05:55.374560+00:00",
+    "result_data": {
+      "total_emails": 3,
+      "sent_emails": [
+        {
+          "recipient": "user1@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:05:51.300469+00:00",
+          "status": "sent"
+        },
+        {
+          "recipient": "user2@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:05:53.327024+00:00",
+          "status": "sent"
+        },
+        {
+          "recipient": "user3@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:05:55.353644+00:00",
+          "status": "sent"
+        }
+      ],
+      "success_count": 3
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "recipients": [
+        "user1@example.com",
+        "user2@example.com",
+        "user3@example.com"
+      ],
+      "subject": "Test Email"
+    }
+  },
+  "f79d0e96-b8fe-46f9-8525-9fd0b33b4c41": {
+    "id": "f79d0e96-b8fe-46f9-8525-9fd0b33b4c41",
+    "task_type": "data_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:05:51.561349+00:00",
+    "started_at": "2026-01-24T12:05:51.668836+00:00",
+    "completed_at": "2026-01-24T12:06:06.963234+00:00",
+    "result_data": {
+      "total_rows": 10000,
+      "processed_rows": 10000,
+      "statistics": {
+        "sum": 495000,
+        "average": 49.5,
+        "min": 0,
+        "max": 99
+      }
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "rows": 10000
+    }
+  },
+  "c33f4342-b554-4e5a-9f96-d7bd9e2b3967": {
+    "id": "c33f4342-b554-4e5a-9f96-d7bd9e2b3967",
+    "task_type": "data_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:05:56.293138+00:00",
+    "started_at": "2026-01-24T12:05:56.417029+00:00",
+    "completed_at": "2026-01-24T12:06:11.587461+00:00",
+    "result_data": {
+      "total_rows": 200,
+      "processed_rows": 200,
+      "statistics": {
+        "sum": 9900,
+        "average": 49.5,
+        "min": 0,
+        "max": 99
+      }
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "rows": 200
+    }
+  },
+  "c9e6f16e-8e2d-4ba4-8d01-59a97126ec2d": {
+    "id": "c9e6f16e-8e2d-4ba4-8d01-59a97126ec2d",
+    "task_type": "email_simulation",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:05:58.660389+00:00",
+    "started_at": "2026-01-24T12:05:58.774867+00:00",
+    "completed_at": "2026-01-24T12:06:04.838341+00:00",
+    "result_data": {
+      "total_emails": 3,
+      "sent_emails": [
+        {
+          "recipient": "user1@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:06:00.791222+00:00",
+          "status": "sent"
+        },
+        {
+          "recipient": "user2@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:06:02.790784+00:00",
+          "status": "sent"
+        },
+        {
+          "recipient": "user3@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:06:04.818255+00:00",
+          "status": "sent"
+        }
+      ],
+      "success_count": 3
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "recipients": [
+        "user1@example.com",
+        "user2@example.com",
+        "user3@example.com"
+      ],
+      "subject": "Test Email"
+    }
+  },
+  "d817868a-55fa-4526-a2a8-9d44c2e6f42c": {
+    "id": "d817868a-55fa-4526-a2a8-9d44c2e6f42c",
+    "task_type": "image_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:06:01.027070+00:00",
+    "started_at": "2026-01-24T12:06:01.142000+00:00",
+    "completed_at": "2026-01-24T12:06:07.189422+00:00",
+    "result_data": {
+      "total_images": 2,
+      "processed_images": [
+        {
+          "original": "img1.jpg",
+          "operation": "resize",
+          "output": "processed_img1.jpg",
+          "size": "800x600",
+          "processed_at": "2026-01-24T12:06:04.162581+00:00"
+        },
+        {
+          "original": "img2.jpg",
+          "operation": "resize",
+          "output": "processed_img2.jpg",
+          "size": "800x600",
+          "processed_at": "2026-01-24T12:06:07.168491+00:00"
+        }
+      ],
+      "operation": "resize"
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "images": [
+        "img1.jpg",
+        "img2.jpg"
+      ],
+      "operation": "resize"
+    }
+  },
+  "2597ea4b-5120-4c76-94fa-0340e69be698": {
+    "id": "2597ea4b-5120-4c76-94fa-0340e69be698",
+    "task_type": "email_simulation",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:06:05.737946+00:00",
+    "started_at": "2026-01-24T12:06:05.864657+00:00",
+    "completed_at": "2026-01-24T12:06:07.898986+00:00",
+    "result_data": {
+      "total_emails": 1,
+      "sent_emails": [
+        {
+          "recipient": "test@example.com",
+          "subject": "Test",
+          "sent_at": "2026-01-24T12:06:07.887395+00:00",
+          "status": "sent"
+        }
+      ],
+      "success_count": 1
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "recipients": [
+        "test@example.com"
+      ],
+      "subject": "Test"
+    }
+  },
+  "2e85aeaa-6133-4b3a-bf74-964fe7c87ced": {
+    "id": "2e85aeaa-6133-4b3a-bf74-964fe7c87ced",
+    "task_type": "data_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:07:01.459203+00:00",
+    "started_at": "2026-01-24T12:07:01.604752+00:00",
+    "completed_at": "2026-01-24T12:07:16.766212+00:00",
+    "result_data": {
+      "total_rows": 1000,
+      "processed_rows": 1000,
+      "statistics": {
+        "sum": 49500,
+        "average": 49.5,
+        "min": 0,
+        "max": 99
+      }
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "rows": 1000
+    }
+  },
+  "31c7ddfe-bb18-420d-a286-408bec21c0f0": {
+    "id": "31c7ddfe-bb18-420d-a286-408bec21c0f0",
+    "task_type": "email_simulation",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:07:04.440953+00:00",
+    "started_at": "2026-01-24T12:07:04.558394+00:00",
+    "completed_at": "2026-01-24T12:07:08.632518+00:00",
+    "result_data": {
+      "total_emails": 2,
+      "sent_emails": [
+        {
+          "recipient": "user1@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:07:06.587620+00:00",
+          "status": "sent"
+        },
+        {
+          "recipient": "user2@example.com",
+          "subject": "Test Email",
+          "sent_at": "2026-01-24T12:07:08.618675+00:00",
+          "status": "sent"
+        }
+      ],
+      "success_count": 2
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "recipients": [
+        "user1@example.com",
+        "user2@example.com"
+      ],
+      "subject": "Test Email"
+    }
+  },
+  "58404676-c512-4a8b-8686-226ea9d56179": {
+    "id": "58404676-c512-4a8b-8686-226ea9d56179",
+    "task_type": "image_processing",
+    "status": "SUCCESS",
+    "created_at": "2026-01-24T12:07:06.648377+00:00",
+    "started_at": "2026-01-24T12:07:06.777153+00:00",
+    "completed_at": "2026-01-24T12:07:15.823565+00:00",
+    "result_data": {
+      "total_images": 3,
+      "processed_images": [
+        {
+          "original": "image1.jpg",
+          "operation": "resize",
+          "output": "processed_image1.jpg",
+          "size": "800x600",
+          "processed_at": "2026-01-24T12:07:09.804975+00:00"
+        },
+        {
+          "original": "image2.jpg",
+          "operation": "resize",
+          "output": "processed_image2.jpg",
+          "size": "800x600",
+          "processed_at": "2026-01-24T12:07:12.803095+00:00"
+        },
+        {
+          "original": "image3.jpg",
+          "operation": "resize",
+          "output": "processed_image3.jpg",
+          "size": "800x600",
+          "processed_at": "2026-01-24T12:07:15.812678+00:00"
+        }
+      ],
+      "operation": "resize"
+    },
+    "error_message": null,
+    "progress": 100,
+    "parameters": {
+      "images": [
+        "image1.jpg",
+        "image2.jpg",
+        "image3.jpg"
+      ],
+      "operation": "resize"
+    }
+  }
+}

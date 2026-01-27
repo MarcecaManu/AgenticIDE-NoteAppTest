@@ -1,0 +1,7 @@
+@echo off
+echo Installing backend dependencies...
+cd backend
+pip install -r requirements.txt
+echo.
+echo Starting FastAPI server...
+uvicorn main:app --reload

@@ -2,9 +2,9 @@ Project,Security,Reliability,Maintainability,Coverage (%),Duplications (%),Secur
 copilot1,0,0,1,96.4,0,0
 copilot2,0,2,3,95.1,0,0
 copilot3,0,0,2,99.1,0,0
-windsurf1,
-windsurf2,
-windsurf3,
+windsurf1,0,0,2,100,0,0
+windsurf2,0,0,2,100,0,0
+windsurf3,0,0,2,98.9,0,0
 cursor1,0,0,2,94.00,0,0
 cursor2,0,0,1,97.4,0,0
 cursor3,0,2,4,96.0,0,0
